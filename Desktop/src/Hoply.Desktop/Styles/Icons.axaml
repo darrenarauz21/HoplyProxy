@@ -1,0 +1,16 @@
+<!-- Íconos de trazo sobre una cuadrícula de 24x24. Se dibujan con Path.icon (ver Controls.axaml). -->
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <StreamGeometry x:Key="Icon.Cable">M9,2 L9,6 M15,2 L15,6 M7,6 L17,6 L17,11 A5,5 0 0 1 7,11 Z M12,16 L12,22</StreamGeometry>
+  <StreamGeometry x:Key="Icon.WiFi">M2,8.8 A15,15 0 0 1 22,8.8 M5,12.5 A10,10 0 0 1 19,12.5 M8.5,16 A5,5 0 0 1 15.5,16 M12,19.5 L12.01,19.5</StreamGeometry>
+  <StreamGeometry x:Key="Icon.Phone">M8,2.5 L16,2.5 A2,2 0 0 1 18,4.5 L18,19.5 A2,2 0 0 1 16,21.5 L8,21.5 A2,2 0 0 1 6,19.5 L6,4.5 A2,2 0 0 1 8,2.5 Z M11,18 L13,18</StreamGeometry>
+  <StreamGeometry x:Key="Icon.Globe">M12,2 A10,10 0 1 0 12,22 A10,10 0 1 0 12,2 Z M2,12 L22,12 M12,2 C14.5,4.7 16,8.3 16,12 C16,15.7 14.5,19.3 12,22 C9.5,19.3 8,15.7 8,12 C8,8.3 9.5,4.7 12,2 Z</StreamGeometry>
+  <StreamGeometry x:Key="Icon.Help">M12,2 A10,10 0 1 0 12,22 A10,10 0 1 0 12,2 Z M9.1,9 A3,3 0 0 1 14.9,10 C14.9,12 12,12.5 12,14 M12,17.5 L12.01,17.5</StreamGeometry>
+  <StreamGeometry x:Key="Icon.Link">M10,13.5 A5,5 0 0 0 17.5,14 L20.5,11 A5,5 0 0 0 13.5,4 L11.8,5.7 M14,10.5 A5,5 0 0 0 6.5,10 L3.5,13 A5,5 0 0 0 10.5,20 L12.2,18.3</StreamGeometry>
+  <StreamGeometry x:Key="Icon.Alert">M12,3 L22,20 L2,20 Z M12,9.5 L12,13.5 M12,17 L12.01,17</StreamGeometry>
+  <StreamGeometry x:Key="Icon.Power">M12,2.5 L12,11 M6.3,6.3 A8,8 0 1 0 17.7,6.3</StreamGeometry>
+  <StreamGeometry x:Key="Icon.Terminal">M4,17 L10,11 L4,5 M12,19 L20,19</StreamGeometry>
+  <StreamGeometry x:Key="Icon.Refresh">M20,12 A8,8 0 1 1 17.7,6.3 M20,3 L20,8 L15,8</StreamGeometry>
+  <StreamGeometry x:Key="Icon.ChevronDown">M5.5,8.5 L12,15 L18.5,8.5</StreamGeometry>
+  <StreamGeometry x:Key="Icon.ChevronUp">M5.5,15.5 L12,9 L18.5,15.5</StreamGeometry>
+</ResourceDictionary>

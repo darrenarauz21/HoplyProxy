@@ -1,0 +1,22 @@
+# Generados por XcodeGen
+Hoply.xcodeproj/
+App/Info.plist
+
+# Xcode y Swift Package Manager
+DerivedData/
+.build/
+.swiftpm/
+xcuserdata/
+*.xcuserstate
+
+# Artefactos de compilación
+*.ipa
+*.xcarchive
+
+# Sistema
+.DS_Store
+
+# .NET (Desktop)
+bin/
+obj/
+*.user

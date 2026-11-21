@@ -1,0 +1,61 @@
+<!-- Paleta del panel de escritorio: azul marino profundo con acento azul acero, como la bandeja del sistema. -->
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.ThemeDictionaries>
+    <ResourceDictionary x:Key="Light">
+      <SolidColorBrush x:Key="Tp.Background" Color="#F4F7FB" />
+      <SolidColorBrush x:Key="Tp.Surface" Color="#FFFFFF" />
+      <SolidColorBrush x:Key="Tp.Raised" Color="#EDF2F8" />
+      <SolidColorBrush x:Key="Tp.Hover" Color="#E4EBF4" />
+      <SolidColorBrush x:Key="Tp.Border" Color="#D8E1EC" />
+      <SolidColorBrush x:Key="Tp.Divider" Color="#E4EAF2" />
+      <SolidColorBrush x:Key="Tp.Footer" Color="#EDF1F7" />
+      <SolidColorBrush x:Key="Tp.Edge" Color="#14000000" />
+      <SolidColorBrush x:Key="Tp.Text" Color="#16202E" />
+      <SolidColorBrush x:Key="Tp.Secondary" Color="#4E5D72" />
+      <SolidColorBrush x:Key="Tp.Tertiary" Color="#7B899C" />
+      <SolidColorBrush x:Key="Tp.Success" Color="#2F8F5B" />
+      <SolidColorBrush x:Key="Tp.Warning" Color="#B7791F" />
+      <SolidColorBrush x:Key="Tp.Danger" Color="#C6473B" />
+      <SolidColorBrush x:Key="Tp.AccentText" Color="#2A62C9" />
+      <SolidColorBrush x:Key="Tp.AccentSoft" Color="#1F2F6FE0" />
+      <SolidColorBrush x:Key="Tp.SuccessSoft" Color="#1F2F8F5B" />
+      <SolidColorBrush x:Key="Tp.WarningSoft" Color="#20B7791F" />
+      <SolidColorBrush x:Key="Tp.DangerSoft" Color="#20C6473B" />
+    </ResourceDictionary>
+    <ResourceDictionary x:Key="Dark">
+      <SolidColorBrush x:Key="Tp.Background" Color="#1A2230" />
+      <SolidColorBrush x:Key="Tp.Surface" Color="#1E2735" />
+      <SolidColorBrush x:Key="Tp.Raised" Color="#232D3D" />
+      <SolidColorBrush x:Key="Tp.Hover" Color="#2A3648" />
+      <SolidColorBrush x:Key="Tp.Border" Color="#2F3B4D" />
+      <SolidColorBrush x:Key="Tp.Divider" Color="#293445" />
+      <SolidColorBrush x:Key="Tp.Footer" Color="#161E2A" />
+      <SolidColorBrush x:Key="Tp.Edge" Color="#1AFFFFFF" />
+      <SolidColorBrush x:Key="Tp.Text" Color="#E9EFF7" />
+      <SolidColorBrush x:Key="Tp.Secondary" Color="#A7B5C7" />
+      <SolidColorBrush x:Key="Tp.Tertiary" Color="#7E8EA3" />
+      <SolidColorBrush x:Key="Tp.Success" Color="#7CC79A" />
+      <SolidColorBrush x:Key="Tp.Warning" Color="#E3B266" />
+      <SolidColorBrush x:Key="Tp.Danger" Color="#E58272" />
+      <SolidColorBrush x:Key="Tp.AccentText" Color="#9CC3F0" />
+      <SolidColorBrush x:Key="Tp.AccentSoft" Color="#332F6FE0" />
+      <SolidColorBrush x:Key="Tp.SuccessSoft" Color="#297CC79A" />
+      <SolidColorBrush x:Key="Tp.WarningSoft" Color="#29E3B266" />
+      <SolidColorBrush x:Key="Tp.DangerSoft" Color="#29E58272" />
+    </ResourceDictionary>
+  </ResourceDictionary.ThemeDictionaries>
+
+  <SolidColorBrush x:Key="Tp.Accent" Color="#3D7FE0" />
+  <SolidColorBrush x:Key="Tp.AccentHover" Color="#4F8DE8" />
+  <SolidColorBrush x:Key="Tp.AccentPressed" Color="#326BC0" />
+  <SolidColorBrush x:Key="Tp.OnAccent" Color="#FFFFFF" />
+
+  <FontFamily x:Key="Tp.Serif">Georgia, Cambria, Noto Serif, DejaVu Serif</FontFamily>
+  <FontFamily x:Key="Tp.Mono">Cascadia Mono, Consolas, Menlo, DejaVu Sans Mono</FontFamily>
+
+  <!-- El acento de los controles de Fluent (interruptores, foco de los campos) también es azul. -->
+  <Color x:Key="SystemAccentColor">#3D7FE0</Color>
+  <Color x:Key="SystemAccentColorLight1">#4F8DE8</Color>
+  <Color x:Key="SystemAccentColorDark1">#326BC0</Color>
+</ResourceDictionary>

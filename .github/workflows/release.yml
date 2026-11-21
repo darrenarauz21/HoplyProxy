@@ -1,0 +1,77 @@
+name: Release
+
+# Publica una release cuando cambia la versión (MARKETING_VERSION en project.yml) en main. También compila, sin
+# publicar, en las ramas release/**, para validar antes de fusionar. La etiqueta vX.Y.Z la crea la propia release.
+on:
+  push:
+    branches:
+      - main
+      - "release/**"
+    paths:
+      - project.yml
+      - Desktop/Directory.Build.props
+      - .github/workflows/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ipa:
+    name: App de iPhone
+    uses: ./.github/workflows/build-ipa.yml
+
+  desktop:
+    name: App de escritorio
+    uses: ./.github/workflows/build-desktop.yml
+
+  publish:
+    name: Publicar release
+    needs: [ipa, desktop]
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Leer la versión
+        id: version
+        run: |
+          version="$(sed -n 's/^ *MARKETING_VERSION: "\([0-9.]*\)"$/\1/p' project.yml)"
+          if [[ -z "$version" ]]; then
+            echo "No se encontró MARKETING_VERSION en project.yml" >&2
+            exit 1
+          fi
+          echo "tag=v$version" >> "$GITHUB_OUTPUT"
+
+      - name: Comprobar si ya existe
+        id: existing
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/download-artifact@v5
+        if: ${{ steps.existing.outputs.exists == 'false' }}
+        with:
+          path: assets
+          merge-multiple: true
+
+      - name: Crear release
+        if: ${{ steps.existing.outputs.exists == 'false' }}
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+        run: >
+          gh release create "$TAG" assets/*
+          --repo "$GITHUB_REPOSITORY"
+          --target "$GITHUB_SHA"
+          --title "Hoply Proxy $TAG"
+          --generate-notes

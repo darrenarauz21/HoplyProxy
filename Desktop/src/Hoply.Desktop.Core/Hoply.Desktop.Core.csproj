@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Todo lo que no es interfaz: reenvío USB (usbmux), proxy del sistema, verificación y ajustes. -->
+  <PropertyGroup>
+    <RootNamespace>Hoply.Desktop.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Hoply.Desktop.Tests" />
+  </ItemGroup>
+
+</Project>

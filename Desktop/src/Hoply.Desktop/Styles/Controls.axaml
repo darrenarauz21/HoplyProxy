@@ -1,0 +1,331 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!-- Texto. El color y el tamaño base se heredan de la ventana, para no pisar el de los botones. -->
+  <Style Selector="TextBlock.title">
+    <Setter Property="FontFamily" Value="{DynamicResource Tp.Serif}" />
+    <Setter Property="FontSize" Value="18.5" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Text}" />
+  </Style>
+  <Style Selector="TextBlock.heading">
+    <Setter Property="FontFamily" Value="{DynamicResource Tp.Serif}" />
+    <Setter Property="FontSize" Value="16.5" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Text}" />
+  </Style>
+  <Style Selector="TextBlock.strong">
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Text}" />
+  </Style>
+  <Style Selector="TextBlock.secondary">
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Secondary}" />
+  </Style>
+  <Style Selector="TextBlock.caption">
+    <Setter Property="FontSize" Value="11.5" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Tertiary}" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+  </Style>
+  <Style Selector="TextBlock.section">
+    <Setter Property="FontSize" Value="11.5" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Secondary}" />
+  </Style>
+  <Style Selector="TextBlock.label">
+    <Setter Property="FontSize" Value="10.5" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Tertiary}" />
+  </Style>
+  <Style Selector="TextBlock.error">
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Danger}" />
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+  </Style>
+
+  <!-- Ventana sin marco: una sola superficie redondeada. -->
+  <Style Selector="Border.shell">
+    <Setter Property="Background" Value="{DynamicResource Tp.Surface}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Tp.Edge}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="16" />
+    <Setter Property="ClipToBounds" Value="True" />
+  </Style>
+
+  <!-- Íconos de trazo -->
+  <Style Selector="Path.icon">
+    <Setter Property="Width" Value="18" />
+    <Setter Property="Height" Value="18" />
+    <Setter Property="Stretch" Value="Uniform" />
+    <Setter Property="Stroke" Value="{DynamicResource Tp.Secondary}" />
+    <Setter Property="StrokeThickness" Value="1.7" />
+    <Setter Property="StrokeLineCap" Value="Round" />
+    <Setter Property="StrokeJoin" Value="Round" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="HorizontalAlignment" Value="Center" />
+  </Style>
+  <Style Selector="Path.icon.small">
+    <Setter Property="Width" Value="14" />
+    <Setter Property="Height" Value="14" />
+  </Style>
+  <Style Selector="Path.icon.large">
+    <Setter Property="Width" Value="21" />
+    <Setter Property="Height" Value="21" />
+    <Setter Property="StrokeThickness" Value="1.9" />
+  </Style>
+
+  <!-- Logotipo sobre una loseta discreta -->
+  <Style Selector="Border.brand">
+    <Setter Property="Width" Value="34" />
+    <Setter Property="Height" Value="34" />
+    <Setter Property="CornerRadius" Value="10" />
+    <Setter Property="Background" Value="{DynamicResource Tp.Raised}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Tp.Divider}" />
+    <Setter Property="BorderThickness" Value="1" />
+  </Style>
+
+  <!-- Tarjetas -->
+  <Style Selector="Border.card">
+    <Setter Property="Background" Value="{DynamicResource Tp.Raised}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Tp.Divider}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="13" />
+    <Setter Property="Padding" Value="14" />
+  </Style>
+  <Style Selector="Border.card.compact">
+    <Setter Property="Padding" Value="12,10" />
+  </Style>
+
+  <!-- Línea fina de estado, como las barras del panel de uso. -->
+  <Style Selector="Border.signal">
+    <Setter Property="Height" Value="3" />
+    <Setter Property="CornerRadius" Value="2" />
+    <Setter Property="Background" Value="{DynamicResource Tp.Border}" />
+  </Style>
+  <Style Selector="Border.signal.busy">
+    <Setter Property="Background" Value="{DynamicResource Tp.Accent}" />
+  </Style>
+  <Style Selector="Border.signal.ok">
+    <Setter Property="Background" Value="{DynamicResource Tp.Success}" />
+  </Style>
+  <Style Selector="Border.signal.warning">
+    <Setter Property="Background" Value="{DynamicResource Tp.Warning}" />
+  </Style>
+  <Style Selector="Border.signal.error">
+    <Setter Property="Background" Value="{DynamicResource Tp.Danger}" />
+  </Style>
+
+  <Style Selector="Border.divider">
+    <Setter Property="Height" Value="1" />
+    <Setter Property="Background" Value="{DynamicResource Tp.Divider}" />
+  </Style>
+
+  <!-- Pie fijo con la acción principal -->
+  <Style Selector="Border.footer">
+    <Setter Property="Background" Value="{DynamicResource Tp.Footer}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Tp.Divider}" />
+    <Setter Property="BorderThickness" Value="0,1,0,0" />
+    <Setter Property="Padding" Value="16,12,16,13" />
+  </Style>
+
+  <!-- Indicador de estado -->
+  <Style Selector="Border.orb">
+    <Setter Property="Width" Value="44" />
+    <Setter Property="Height" Value="44" />
+    <Setter Property="CornerRadius" Value="22" />
+    <Setter Property="Background" Value="{DynamicResource Tp.Hover}" />
+  </Style>
+  <Style Selector="Border.orb.busy">
+    <Setter Property="Background" Value="{DynamicResource Tp.AccentSoft}" />
+  </Style>
+  <Style Selector="Border.orb.busy Path.icon">
+    <Setter Property="Stroke" Value="{DynamicResource Tp.AccentText}" />
+  </Style>
+  <Style Selector="Border.orb.ok">
+    <Setter Property="Background" Value="{DynamicResource Tp.SuccessSoft}" />
+  </Style>
+  <Style Selector="Border.orb.ok Path.icon">
+    <Setter Property="Stroke" Value="{DynamicResource Tp.Success}" />
+  </Style>
+  <Style Selector="Border.orb.warning">
+    <Setter Property="Background" Value="{DynamicResource Tp.WarningSoft}" />
+  </Style>
+  <Style Selector="Border.orb.warning Path.icon">
+    <Setter Property="Stroke" Value="{DynamicResource Tp.Warning}" />
+  </Style>
+  <Style Selector="Border.orb.error">
+    <Setter Property="Background" Value="{DynamicResource Tp.DangerSoft}" />
+  </Style>
+  <Style Selector="Border.orb.error Path.icon">
+    <Setter Property="Stroke" Value="{DynamicResource Tp.Danger}" />
+  </Style>
+
+  <Style Selector="Ellipse.dot">
+    <Setter Property="Width" Value="7" />
+    <Setter Property="Height" Value="7" />
+    <Setter Property="Fill" Value="{DynamicResource Tp.Tertiary}" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+  </Style>
+  <Style Selector="Ellipse.dot.on">
+    <Setter Property="Fill" Value="{DynamicResource Tp.Success}" />
+  </Style>
+
+  <!-- Botón principal -->
+  <Style Selector="Button.primary">
+    <Setter Property="Background" Value="{DynamicResource Tp.Accent}" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.OnAccent}" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="FontSize" Value="13.5" />
+    <Setter Property="Height" Value="42" />
+    <Setter Property="CornerRadius" Value="12" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+  </Style>
+  <Style Selector="Button.primary:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource Tp.AccentHover}" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.OnAccent}" />
+  </Style>
+  <Style Selector="Button.primary:pressed /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource Tp.AccentPressed}" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.OnAccent}" />
+  </Style>
+  <Style Selector="Button.primary:disabled /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource Tp.Accent}" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.OnAccent}" />
+    <Setter Property="Opacity" Value="0.55" />
+  </Style>
+  <!-- Conectado: el botón pasa a «Desconectar» y deja de llamar la atención. -->
+  <Style Selector="Button.primary.connected">
+    <Setter Property="Background" Value="{DynamicResource Tp.Hover}" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Danger}" />
+  </Style>
+  <Style Selector="Button.primary.connected:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource Tp.DangerSoft}" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Danger}" />
+  </Style>
+  <Style Selector="Button.primary.connected:pressed /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource Tp.DangerSoft}" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Danger}" />
+  </Style>
+
+  <!-- Opciones USB / Wi-Fi, con el aire de las píldoras del panel. -->
+  <Style Selector="Button.option">
+    <Setter Property="Background" Value="{DynamicResource Tp.Raised}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Tp.Divider}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="12" />
+    <Setter Property="Padding" Value="11,10" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    <Setter Property="VerticalAlignment" Value="Stretch" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+  </Style>
+  <Style Selector="Button.option:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource Tp.Hover}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Tp.Border}" />
+  </Style>
+  <Style Selector="Button.option.selected /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource Tp.AccentSoft}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Tp.Accent}" />
+  </Style>
+  <Style Selector="Button.option.selected Path.icon">
+    <Setter Property="Stroke" Value="{DynamicResource Tp.AccentText}" />
+  </Style>
+  <Style Selector="Button.option.selected TextBlock.strong">
+    <Setter Property="Foreground" Value="{DynamicResource Tp.AccentText}" />
+  </Style>
+  <Style Selector="Button.option:disabled /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Opacity" Value="0.55" />
+  </Style>
+
+  <!-- Botones de texto e ícono -->
+  <Style Selector="Button.link, Button.iconButton">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Secondary}" />
+    <Setter Property="CornerRadius" Value="8" />
+    <Setter Property="Padding" Value="8,6" />
+  </Style>
+  <Style Selector="Button.iconButton">
+    <Setter Property="Width" Value="30" />
+    <Setter Property="Height" Value="30" />
+    <Setter Property="CornerRadius" Value="8" />
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+  </Style>
+  <Style Selector="Button.link:pointerover /template/ ContentPresenter#PART_ContentPresenter, Button.iconButton:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource Tp.Hover}" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Text}" />
+  </Style>
+  <Style Selector="Button.link TextBlock">
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Tertiary}" />
+    <Setter Property="FontSize" Value="12" />
+  </Style>
+  <Style Selector="Button.link:pointerover TextBlock">
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Text}" />
+  </Style>
+
+  <!-- Campos -->
+  <Style Selector="TextBox">
+    <Setter Property="CornerRadius" Value="10" />
+    <Setter Property="Background" Value="{DynamicResource Tp.Raised}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Tp.Divider}" />
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Text}" />
+    <Setter Property="FontFamily" Value="{DynamicResource Tp.Mono}" />
+    <Setter Property="FontSize" Value="12.5" />
+    <Setter Property="Padding" Value="11,8" />
+  </Style>
+  <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="{DynamicResource Tp.Accent}" />
+  </Style>
+
+  <!-- Avanzado: encabezado propio, sin los fondos del Expander de Fluent. -->
+  <Style Selector="ToggleButton.advancedHeader">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="MinHeight" Value="24" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="CornerRadius" Value="8" />
+  </Style>
+  <Style Selector="ToggleButton.advancedHeader /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="0" />
+  </Style>
+  <Style Selector="ToggleButton.advancedHeader:checked /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="Transparent" />
+  </Style>
+  <Style Selector="ToggleButton.advancedHeader:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource Tp.Hover}" />
+  </Style>
+  <Style Selector="ToggleButton.advancedHeader:checked:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource Tp.Hover}" />
+  </Style>
+  <Style Selector="ToggleButton.advancedHeader:pressed /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource Tp.Hover}" />
+  </Style>
+  <Style Selector="ToggleButton.advancedHeader:checked:pressed /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource Tp.Hover}" />
+  </Style>
+  <Style Selector="ToggleButton.advancedHeader:disabled /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="0" />
+  </Style>
+  <Style Selector="ToggleButton.advancedHeader:disabled">
+    <Setter Property="Opacity" Value="0.55" />
+  </Style>
+  <Style Selector="ToggleButton.advancedHeader TextBlock">
+    <Setter Property="Foreground" Value="{DynamicResource Tp.Secondary}" />
+    <Setter Property="FontSize" Value="12.5" />
+  </Style>
+  <Style Selector="ToggleButton.advancedHeader Path.up">
+    <Setter Property="IsVisible" Value="False" />
+  </Style>
+  <Style Selector="ToggleButton.advancedHeader:checked Path.up">
+    <Setter Property="IsVisible" Value="True" />
+  </Style>
+  <Style Selector="ToggleButton.advancedHeader:checked Path.down">
+    <Setter Property="IsVisible" Value="False" />
+  </Style>
+</Styles>

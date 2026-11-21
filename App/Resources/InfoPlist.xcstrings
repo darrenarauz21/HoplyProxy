@@ -1,0 +1,64 @@
+{
+  "sourceLanguage": "es",
+  "strings": {
+    "CFBundleDisplayName": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply"
+          }
+        }
+      }
+    },
+    "NSLocalNetworkUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply acepta conexiones de tu laptop en la red Wi-Fi local para compartir los datos móviles del iPhone."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply accepts connections from your laptop on the local Wi-Fi network to share the iPhone's mobile data."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Hoply aceita conexões do seu laptop na rede Wi-Fi local para compartilhar os dados móveis do iPhone."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply accepte les connexions de votre ordinateur sur le réseau Wi-Fi local pour partager les données mobiles de l’iPhone."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

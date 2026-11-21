@@ -1,0 +1,5719 @@
+{
+  "sourceLanguage": "es",
+  "strings": {
+    "common.cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
+          }
+        }
+      }
+    },
+    "common.copied": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiado"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copied"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copié"
+          }
+        }
+      }
+    },
+    "common.copy": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copier"
+          }
+        }
+      }
+    },
+    "common.save": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer"
+          }
+        }
+      }
+    },
+    "docs.desktop.download": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descárgala de la sección **Releases** del repositorio de GitHub, o ejecuta el workflow **Build Desktop** en la pestaña **Actions** de tu fork. Es un único ejecutable por sistema."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download it from the repository's **Releases** on GitHub, or run the **Build Desktop** workflow in your fork's **Actions** tab. It's a single executable per system."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baixe na seção **Releases** do repositório no GitHub ou execute o workflow **Build Desktop** na aba **Actions** do seu fork. É um único executável por sistema."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Téléchargez-la depuis les **Releases** du dépôt sur GitHub, ou lancez le workflow **Build Desktop** dans l’onglet **Actions** de votre fork. C’est un seul exécutable par système."
+          }
+        }
+      }
+    },
+    "docs.desktop.download.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descargar"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Téléchargement"
+          }
+        }
+      }
+    },
+    "docs.desktop.intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply Desktop hace la parte de la laptop por ti: reenvía la conexión por el cable, activa el proxy del sistema y lo deja como estaba al desconectar. Funciona en Windows, macOS y Linux, y no necesita Node.js ni go-ios."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply Desktop handles the laptop side for you: it forwards the connection over the cable, turns on the system proxy and restores it when you disconnect. It runs on Windows, macOS and Linux and needs neither Node.js nor go-ios."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Hoply Desktop cuida da parte do laptop para você: encaminha a conexão pelo cabo, ativa o proxy do sistema e o restaura quando você desconecta. Funciona no Windows, macOS e Linux e não precisa de Node.js nem go-ios."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply Desktop s’occupe du côté ordinateur pour vous : il fait passer la connexion par le câble, active le proxy du système et le rétablit à la déconnexion. Il fonctionne sous Windows, macOS et Linux, sans Node.js ni go-ios."
+          }
+        }
+      }
+    },
+    "docs.desktop.requirements.linux": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**Linux:** el paquete usbmuxd para USB. El proxy del sistema se configura en escritorios GNOME."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**Linux:** the usbmuxd package for USB. The system proxy is configured on GNOME desktops."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**Linux:** o pacote usbmuxd para USB. O proxy do sistema é configurado em desktops GNOME."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**Linux :** le paquet usbmuxd pour l’USB. Le proxy du système est configuré sur les bureaux GNOME."
+          }
+        }
+      }
+    },
+    "docs.desktop.requirements.macos": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**macOS:** nada adicional. La primera vez, ábrela con clic derecho > Abrir."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**macOS:** nothing else. The first time, open it with right-click > Open."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**macOS:** nada mais. Na primeira vez, abra com o botão direito > Abrir."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**macOS :** rien de plus. La première fois, ouvrez-la avec clic droit > Ouvrir."
+          }
+        }
+      }
+    },
+    "docs.desktop.requirements.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Requisitos"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Requirements"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Requisitos"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configuration requise"
+          }
+        }
+      }
+    },
+    "docs.desktop.requirements.windows": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**Windows:** la app Apple Devices o iTunes, para que el sistema reconozca el iPhone por cable."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**Windows:** the Apple Devices app or iTunes, so the system recognizes the iPhone over the cable."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**Windows:** o app Dispositivos Apple ou o iTunes, para que o sistema reconheça o iPhone pelo cabo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**Windows :** l’app Appareils Apple ou iTunes, pour que le système reconnaisse l’iPhone par le câble."
+          }
+        }
+      }
+    },
+    "docs.desktop.summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecta la laptop con un clic"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connect the laptop in one click"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecte o laptop com um clique"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connectez l’ordinateur en un clic"
+          }
+        }
+      }
+    },
+    "docs.desktop.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App de escritorio"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desktop app"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App para computador"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App pour ordinateur"
+          }
+        }
+      }
+    },
+    "docs.desktop.use.1": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicia el proxy en esta app."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start the proxy in this app."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicie o proxy neste app."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démarrez le proxy dans cette app."
+          }
+        }
+      }
+    },
+    "docs.desktop.use.2": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En la laptop, elige **USB** o **Wi-Fi**. En Wi-Fi, escribe la IP que aparece en la tarjeta Conexión."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On the laptop, choose **USB** or **Wi-Fi**. For Wi-Fi, enter the IP shown on the Connection card."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No laptop, escolha **USB** ou **Wi-Fi**. Para Wi-Fi, digite o IP mostrado no cartão Conexão."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sur l’ordinateur, choisissez **USB** ou **Wi-Fi**. En Wi-Fi, saisissez l’IP affichée dans la carte Connexion."
+          }
+        }
+      }
+    },
+    "docs.desktop.use.3": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pulsa **Conectar**. Cuando todo funciona, la app muestra tu IP pública."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click **Connect**. When everything works, the app shows your public IP."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clique em **Conectar**. Quando tudo funcionar, o app mostra seu IP público."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cliquez sur **Connecter**. Quand tout fonctionne, l’app affiche votre IP publique."
+          }
+        }
+      }
+    },
+    "docs.desktop.use.4": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pulsa **Desconectar** o cierra la ventana para dejar la laptop como estaba."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click **Disconnect** or close the window to leave the laptop as it was."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clique em **Desconectar** ou feche a janela para deixar o laptop como estava."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cliquez sur **Déconnecter** ou fermez la fenêtre pour remettre l’ordinateur dans son état initial."
+          }
+        }
+      }
+    },
+    "docs.desktop.use.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usarla"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Using it"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Como usar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilisation"
+          }
+        }
+      }
+    },
+    "docs.intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los detalles de cada parte de Hoply."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The details of every part of Hoply."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Os detalhes de cada parte do Hoply."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le détail de chaque partie de Hoply."
+          }
+        }
+      }
+    },
+    "docs.manual.summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasos para Windows, macOS y Linux"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Steps for Windows, macOS and Linux"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passos para Windows, macOS e Linux"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Étapes pour Windows, macOS et Linux"
+          }
+        }
+      }
+    },
+    "docs.manual.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configuración manual"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Manual setup"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configuração manual"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configuration manuelle"
+          }
+        }
+      }
+    },
+    "docs.modes.summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuál elegir y qué necesita cada uno"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which to choose and what each needs"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Qual escolher e o que cada um precisa"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lequel choisir et ce qu’il faut pour chacun"
+          }
+        }
+      }
+    },
+    "docs.modes.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB o Wi-Fi"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB or Wi-Fi"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB ou Wi-Fi"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB ou Wi-Fi"
+          }
+        }
+      }
+    },
+    "docs.modes.usb": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La laptop llega al iPhone por el cable. Es la opción más estable y privada: el proxy solo escucha dentro del iPhone y nadie más en la red puede usarlo. Necesita la app de escritorio o go-ios en la laptop."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The laptop reaches the iPhone through the cable. It's the most stable and private option: the proxy only listens inside the iPhone and nobody else on the network can use it. It needs the desktop app or go-ios on the laptop."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O laptop chega ao iPhone pelo cabo. É a opção mais estável e privada: o proxy só escuta dentro do iPhone e ninguém mais na rede pode usá-lo. Requer o app para computador ou o go-ios no laptop."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’ordinateur atteint l’iPhone par le câble. C’est l’option la plus stable et la plus privée : le proxy n’écoute qu’à l’intérieur de l’iPhone et personne d’autre sur le réseau ne peut l’utiliser. Il faut l’app pour ordinateur ou go-ios."
+          }
+        }
+      }
+    },
+    "docs.modes.wifi": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La laptop se conecta a la IP del iPhone en la red Wi-Fi. No necesita cable ni programas adicionales, pero ambos deben estar en la misma red."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The laptop connects to the iPhone's IP on the Wi-Fi network. No cable or extra software is needed, but both must be on the same network."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O laptop se conecta ao IP do iPhone na rede Wi-Fi. Não precisa de cabo nem de software extra, mas os dois devem estar na mesma rede."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’ordinateur se connecte à l’IP de l’iPhone sur le réseau Wi-Fi. Ni câble ni logiciel supplémentaire, mais les deux doivent être sur le même réseau."
+          }
+        }
+      }
+    },
+    "docs.modes.wifi.clients": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo responden los equipos autorizados en **Ajustes > Clientes autorizados**. El asistente autoriza la red actual."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Only devices allowed in **Settings > Authorized clients** get a response. The assistant allows the current network."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Só os dispositivos permitidos em **Ajustes > Clientes autorizados** recebem resposta. O assistente permite a rede atual."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seuls les appareils autorisés dans **Réglages > Clients autorisés** obtiennent une réponse. L’assistant autorise le réseau actuel."
+          }
+        }
+      }
+    },
+    "docs.modes.wifi.localNetwork": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iOS pide permiso de **Red local** la primera vez. Si lo negaste, actívalo en Ajustes > Privacidad > Red local."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iOS asks for **Local Network** permission the first time. If you denied it, turn it on in Settings > Privacy > Local Network."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O iOS pede a permissão de **Rede Local** na primeira vez. Se você negou, ative-a em Ajustes > Privacidade > Rede Local."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iOS demande l’autorisation **Réseau local** la première fois. Si vous l’avez refusée, activez-la dans Réglages > Confidentialité > Réseau local."
+          }
+        }
+      }
+    },
+    "docs.modes.wifi.trusted": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El tráfico entre la laptop y el iPhone no va cifrado: usa Wi-Fi solo en redes de confianza."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Traffic between the laptop and the iPhone isn't encrypted: use Wi-Fi only on trusted networks."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O tráfego entre o laptop e o iPhone não é criptografado: use o Wi-Fi apenas em redes confiáveis."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le trafic entre l’ordinateur et l’iPhone n’est pas chiffré : n’utilisez le Wi-Fi que sur des réseaux de confiance."
+          }
+        }
+      }
+    },
+    "docs.privacy.carrier": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revisa las condiciones de tu plan móvil: algunos operadores limitan o prohíben compartir datos."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check your mobile plan's terms: some carriers limit or forbid sharing data."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confira as condições do seu plano móvel: algumas operadoras limitam ou proíbem o compartilhamento de dados."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vérifiez les conditions de votre forfait mobile : certains opérateurs limitent ou interdisent le partage de données."
+          }
+        }
+      }
+    },
+    "docs.privacy.noTracking": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La app no envía datos a ningún servidor ni registra los sitios que visitas."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The app sends no data to any server and doesn't log the sites you visit."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O app não envia dados a nenhum servidor nem registra os sites que você visita."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’app n’envoie aucune donnée à aucun serveur et n’enregistre pas les sites que vous visitez."
+          }
+        }
+      }
+    },
+    "docs.privacy.password": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La contraseña, si la activas, se guarda en el Keychain del iPhone."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The password, if you turn it on, is stored in the iPhone's Keychain."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A senha, se você a ativar, fica guardada nas Chaves (Keychain) do iPhone."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le mot de passe, si vous l’activez, est enregistré dans le trousseau de l’iPhone."
+          }
+        }
+      }
+    },
+    "docs.privacy.summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Qué se comparte y con quién"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What is shared and with whom"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O que é compartilhado e com quem"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ce qui est partagé et avec qui"
+          }
+        }
+      }
+    },
+    "docs.privacy.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacidad y seguridad"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy and security"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacidade e segurança"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confidentialité et sécurité"
+          }
+        }
+      }
+    },
+    "docs.privacy.unencrypted": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entre la laptop y el iPhone el tráfico no va cifrado; los sitios HTTPS siguen cifrados de punta a punta."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Traffic between the laptop and the iPhone isn't encrypted; HTTPS sites stay encrypted end to end."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O tráfego entre o laptop e o iPhone não é criptografado; os sites HTTPS continuam criptografados de ponta a ponta."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le trafic entre l’ordinateur et l’iPhone n’est pas chiffré ; les sites HTTPS restent chiffrés de bout en bout."
+          }
+        }
+      }
+    },
+    "docs.privacy.usb": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por USB, el proxy solo es accesible desde la laptop conectada al cable."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Over USB, the proxy is only reachable from the laptop on the cable."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por USB, o proxy só é acessível pelo laptop conectado ao cabo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En USB, le proxy n’est accessible que depuis l’ordinateur branché au câble."
+          }
+        }
+      }
+    },
+    "docs.privacy.wifi": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por Wi-Fi, solo responde a los equipos autorizados y nunca escucha en la red móvil."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Over Wi-Fi, it only answers allowed devices and never listens on the mobile network."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por Wi-Fi, só responde aos dispositivos permitidos e nunca escuta na rede móvel."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En Wi-Fi, il ne répond qu’aux appareils autorisés et n’écoute jamais sur le réseau mobile."
+          }
+        }
+      }
+    },
+    "docs.renewal.auto.fallback": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si alguna vez falla, el recordatorio de Hoply te avisa a tiempo para renovarla a mano."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If it ever fails, Hoply's reminder warns you in time to renew it by hand."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se algum dia falhar, o lembrete do Hoply avisa a tempo para você renovar manualmente."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si jamais ça échoue, le rappel de Hoply vous prévient à temps pour la renouveler à la main."
+          }
+        }
+      }
+    },
+    "docs.renewal.auto.intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sideloadly puede renovarla solo cuando el iPhone y la computadora están en la misma red Wi-Fi."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sideloadly can renew it on its own when the iPhone and the computer are on the same Wi-Fi network."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Sideloadly pode renovar sozinho quando o iPhone e o computador estão na mesma rede Wi-Fi."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sideloadly peut la renouveler tout seul quand l’iPhone et l’ordinateur sont sur le même réseau Wi-Fi."
+          }
+        }
+      }
+    },
+    "docs.renewal.auto.step.1": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Al instalar **Hoply.ipa**, activa la renovación automática con el ícono de actualizar, abajo a la izquierda en Sideloadly."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When you install **Hoply.ipa**, turn on automatic refresh with the refresh icon at the bottom left of Sideloadly."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ao instalar **Hoply.ipa**, ative a renovação automática com o ícone de atualizar, no canto inferior esquerdo do Sideloadly."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En installant **Hoply.ipa**, activez le renouvellement automatique avec l’icône d’actualisation, en bas à gauche de Sideloadly."
+          }
+        }
+      }
+    },
+    "docs.renewal.auto.step.2": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deja que Sideloadly se abra al iniciar la computadora: su servicio queda junto al reloj y es el que renueva."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Let Sideloadly open when the computer starts: its background service sits next to the clock and does the renewal."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deixe o Sideloadly abrir ao iniciar o computador: o serviço dele fica ao lado do relógio e é quem renova."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laissez Sideloadly s’ouvrir au démarrage de l’ordinateur : son service reste près de l’horloge et s’occupe du renouvellement."
+          }
+        }
+      }
+    },
+    "docs.renewal.auto.step.3": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Con los dos en la misma red, renueva unos días antes de que caduque. Si el iPhone no tiene activado el acceso por Wi-Fi, lo hace por cable cuando lo conectas."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "With both on the same network, it renews a few days before expiry. If Wi-Fi access isn't enabled on the iPhone, it uses the cable when you plug it in."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Com os dois na mesma rede, renova alguns dias antes de expirar. Se o acesso por Wi-Fi não estiver ativado no iPhone, usa o cabo quando você o conecta."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avec les deux sur le même réseau, il renouvelle quelques jours avant l’expiration. Si l’accès Wi-Fi n’est pas activé sur l’iPhone, il passe par le câble quand vous le branchez."
+          }
+        }
+      }
+    },
+    "docs.renewal.auto.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renovación automática por Wi-Fi"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatic renewal over Wi-Fi"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renovação automática por Wi-Fi"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renouvellement automatique en Wi-Fi"
+          }
+        }
+      }
+    },
+    "docs.renewal.intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Con un Apple ID gratuito, iOS deja de abrir la app 7 días después de instalarla. Tus ajustes se conservan al renovarla."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "With a free Apple ID, iOS stops opening the app 7 days after it was installed. Your settings are kept when you renew it."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Com um Apple ID gratuito, o iOS deixa de abrir o app 7 dias após a instalação. Seus ajustes são mantidos ao renovar."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avec un identifiant Apple gratuit, iOS n’ouvre plus l’app 7 jours après son installation. Vos réglages sont conservés lors du renouvellement."
+          }
+        }
+      }
+    },
+    "docs.renewal.reminder": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activa **Ajustes > Recordarme renovar la firma** para recibir un aviso antes de que caduque."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn on **Settings > Remind me to renew the signature** to get a notice before it expires."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ative **Ajustes > Lembrar de renovar a assinatura** para receber um aviso antes que expire."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activez **Réglages > Me rappeler de renouveler la signature** pour être prévenu avant l’expiration."
+          }
+        }
+      }
+    },
+    "docs.renewal.step.1": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecta el iPhone a la computadora donde tienes Sideloadly."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connect the iPhone to the computer where you have Sideloadly."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecte o iPhone ao computador onde está o Sideloadly."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Branchez l’iPhone à l’ordinateur où se trouve Sideloadly."
+          }
+        }
+      }
+    },
+    "docs.renewal.step.2": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arrastra de nuevo **Hoply.ipa** e inicia sesión con el mismo Apple ID."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drag **Hoply.ipa** in again and sign in with the same Apple ID."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arraste **Hoply.ipa** novamente e entre com o mesmo Apple ID."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glissez de nouveau **Hoply.ipa** et connectez-vous avec le même identifiant Apple."
+          }
+        }
+      }
+    },
+    "docs.renewal.step.3": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre la app: la fecha de caducidad se actualiza en la pantalla principal."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open the app: the expiry date updates on the main screen."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abra o app: a data de expiração é atualizada na tela principal."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrez l’app : la date d’expiration se met à jour sur l’écran principal."
+          }
+        }
+      }
+    },
+    "docs.renewal.summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La firma gratuita dura 7 días"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The free signature lasts 7 days"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A assinatura gratuita dura 7 dias"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La signature gratuite dure 7 jours"
+          }
+        }
+      }
+    },
+    "docs.renewal.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renovar la instalación"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renew the installation"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renovar a instalação"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renouveler l’installation"
+          }
+        }
+      }
+    },
+    "docs.systemWide.guide": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La guía completa está en **Docs/tun2socks.md** del repositorio."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The full guide is in the repository's **Docs/tun2socks.md**."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O guia completo está em **Docs/tun2socks.md** no repositório."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le guide complet se trouve dans **Docs/tun2socks.md** du dépôt."
+          }
+        }
+      }
+    },
+    "docs.systemWide.intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El proxy funciona con todo lo que respeta la configuración de proxy: navegadores, la mayoría de las apps y las herramientas de consola con variables de entorno."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The proxy works with everything that honors the proxy settings: browsers, most apps and command-line tools with environment variables."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O proxy funciona com tudo que respeita a configuração de proxy: navegadores, a maioria dos apps e ferramentas de linha de comando com variáveis de ambiente."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le proxy fonctionne avec tout ce qui respecte les réglages de proxy : navigateurs, la plupart des apps et les outils en ligne de commande via les variables d’environnement."
+          }
+        }
+      }
+    },
+    "docs.systemWide.summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps que ignoran el proxy"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps that ignore the proxy"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apps que ignoram o proxy"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les apps qui ignorent le proxy"
+          }
+        }
+      }
+    },
+    "docs.systemWide.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo el sistema"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "System-wide"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo o sistema"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tout le système"
+          }
+        }
+      }
+    },
+    "docs.systemWide.when": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algunas apps de escritorio, juegos y VPN ignoran el proxy. Para ellas se puede crear un adaptador de red virtual con tun2socks que envía todo el tráfico TCP por Hoply."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Some desktop apps, games and VPNs ignore the proxy. For those you can create a virtual network adapter with tun2socks that sends all TCP traffic through Hoply."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alguns apps de computador, jogos e VPNs ignoram o proxy. Para eles, você pode criar um adaptador de rede virtual com o tun2socks que envia todo o tráfego TCP pelo Hoply."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Certaines apps pour ordinateur, certains jeux et VPN ignorent le proxy. Pour eux, vous pouvez créer une carte réseau virtuelle avec tun2socks qui envoie tout le trafic TCP par Hoply."
+          }
+        }
+      }
+    },
+    "docs.terminal.intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muchas herramientas de consola ignoran el proxy del sistema pero leen estas variables. Ejecuta la línea en cada terminal nueva, o agrégala a tu perfil."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Many command-line tools ignore the system proxy but read these variables. Run the line in each new terminal, or add it to your profile."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muitas ferramentas de linha de comando ignoram o proxy do sistema, mas leem estas variáveis. Execute a linha em cada terminal novo ou adicione-a ao seu perfil."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beaucoup d’outils en ligne de commande ignorent le proxy du système mais lisent ces variables. Exécutez la ligne dans chaque nouveau terminal ou ajoutez-la à votre profil."
+          }
+        }
+      }
+    },
+    "docs.terminal.posix": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS y Linux"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS and Linux"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS e Linux"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS et Linux"
+          }
+        }
+      }
+    },
+    "docs.terminal.socks": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Con **socks5h** los nombres se resuelven en el iPhone, así que el DNS también sale por los datos móviles."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "With **socks5h** names are resolved on the iPhone, so DNS also goes over mobile data."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Com **socks5h** os nomes são resolvidos no iPhone, então o DNS também passa pelos dados móveis."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avec **socks5h**, les noms sont résolus sur l’iPhone : le DNS passe aussi par les données mobiles."
+          }
+        }
+      }
+    },
+    "docs.terminal.summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "git, npm, curl y otras herramientas"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "git, npm, curl and other tools"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "git, npm, curl e outras ferramentas"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "git, npm, curl et autres outils"
+          }
+        }
+      }
+    },
+    "docs.terminal.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminal"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminal"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminal"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminal"
+          }
+        }
+      }
+    },
+    "docs.terminal.verify": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprobar"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verificar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vérifier"
+          }
+        }
+      }
+    },
+    "docs.terminal.windows": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Windows (PowerShell)"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Windows (PowerShell)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Windows (PowerShell)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Windows (PowerShell)"
+          }
+        }
+      }
+    },
+    "docs.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Documentación"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Documentation"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Documentação"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Documentation"
+          }
+        }
+      }
+    },
+    "docs.trouble.ignoresProxy": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configúrala a mano con la dirección del proxy, usa las variables de la sección Terminal o consulta Todo el sistema."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set it up manually with the proxy address, use the variables from the Terminal section or see System-wide."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configure-o manualmente com o endereço do proxy, use as variáveis da seção Terminal ou veja Todo o sistema."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configurez-la à la main avec l’adresse du proxy, utilisez les variables de la section Terminal ou consultez Tout le système."
+          }
+        }
+      }
+    },
+    "docs.trouble.ignoresProxy.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Una app no usa el proxy"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An app doesn't use the proxy"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um app não usa o proxy"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une app n’utilise pas le proxy"
+          }
+        }
+      }
+    },
+    "docs.trouble.noDevice": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desbloquea el iPhone, reconecta el cable y toca **Confiar**. En Windows instala Apple Devices o iTunes; en Linux, usbmuxd. Prueba otro cable o puerto USB."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlock the iPhone, reconnect the cable and tap **Trust**. On Windows install Apple Devices or iTunes; on Linux, usbmuxd. Try another cable or USB port."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desbloqueie o iPhone, reconecte o cabo e toque em **Confiar**. No Windows, instale Dispositivos Apple ou o iTunes; no Linux, o usbmuxd. Tente outro cabo ou outra porta USB."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déverrouillez l’iPhone, rebranchez le câble et touchez **Se fier**. Sous Windows, installez Appareils Apple ou iTunes ; sous Linux, usbmuxd. Essayez un autre câble ou un autre port USB."
+          }
+        }
+      }
+    },
+    "docs.trouble.noDevice.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La laptop no detecta el iPhone"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The laptop doesn't detect the iPhone"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O laptop não detecta o iPhone"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’ordinateur ne détecte pas l’iPhone"
+          }
+        }
+      }
+    },
+    "docs.trouble.noInternet": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprueba que el proxy esté **Activo** aquí, que haya datos móviles y que el puerto sea el mismo en ambas apps. Revisa **Actividad** para ver los errores recientes."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Make sure the proxy is **Running** here, there's mobile data and the port matches in both apps. Check **Activity** for recent errors."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verifique se o proxy está **Em execução** aqui, se há dados móveis e se a porta é a mesma nos dois apps. Veja erros recentes em **Atividade**."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vérifiez que le proxy est **En marche** ici, qu’il y a des données mobiles et que le port est le même dans les deux apps. Consultez **Activité** pour les erreurs récentes."
+          }
+        }
+      }
+    },
+    "docs.trouble.noInternet.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectado pero sin internet"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connected but no internet"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conectado, mas sem internet"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecté mais sans internet"
+          }
+        }
+      }
+    },
+    "docs.trouble.portInUse": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otro programa usa el puerto 1080 en la laptop, por ejemplo un «ios forward» que quedó abierto. Ciérralo o cambia el puerto en Ajustes y en la app de escritorio."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Another program uses port 1080 on the laptop, for example a leftover “ios forward”. Close it or change the port in Settings and in the desktop app."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Outro programa usa a porta 1080 no laptop, por exemplo um “ios forward” que ficou aberto. Feche-o ou mude a porta em Ajustes e no app para computador."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un autre programme utilise le port 1080 sur l’ordinateur, par exemple un « ios forward » resté ouvert. Fermez-le ou changez le port dans Réglages et dans l’app pour ordinateur."
+          }
+        }
+      }
+    },
+    "docs.trouble.portInUse.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El puerto está en uso"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The port is in use"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A porta está em uso"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le port est déjà utilisé"
+          }
+        }
+      }
+    },
+    "docs.trouble.screenLock": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iOS suspende las apps en segundo plano. Mantén la app abierta o activa **Ajustes > Seguir activo con la pantalla bloqueada** (experimental)."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iOS suspends background apps. Keep the app open or turn on **Settings > Keep running with the screen locked** (experimental)."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O iOS suspende os apps em segundo plano. Mantenha o app aberto ou ative **Ajustes > Continuar com a tela bloqueada** (experimental)."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iOS suspend les apps en arrière-plan. Gardez l’app ouverte ou activez **Réglages > Continuer écran verrouillé** (expérimental)."
+          }
+        }
+      }
+    },
+    "docs.trouble.screenLock.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se corta al bloquear la pantalla"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "It drops when the screen locks"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cai quando a tela bloqueia"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ça coupe quand l’écran se verrouille"
+          }
+        }
+      }
+    },
+    "docs.trouble.udp": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply solo transporta TCP. Lo que depende de UDP, como ping, muchos juegos y algunas videollamadas, puede no funcionar."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply only carries TCP. Anything that relies on UDP, such as ping, many games and some video calls, may not work."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Hoply só transporta TCP. O que depende de UDP, como ping, muitos jogos e algumas videochamadas, pode não funcionar."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply ne transporte que le TCP. Ce qui dépend de l’UDP, comme le ping, beaucoup de jeux et certains appels vidéo, peut ne pas fonctionner."
+          }
+        }
+      }
+    },
+    "docs.trouble.udp.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Videollamadas o juegos no funcionan"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video calls or games don't work"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Videochamadas ou jogos não funcionam"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les appels vidéo ou les jeux ne marchent pas"
+          }
+        }
+      }
+    },
+    "docs.troubleshooting.summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuando algo no conecta"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When something doesn't connect"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quando algo não conecta"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quand quelque chose ne se connecte pas"
+          }
+        }
+      }
+    },
+    "docs.troubleshooting.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solución de problemas"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Troubleshooting"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solução de problemas"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dépannage"
+          }
+        }
+      }
+    },
+    "guide.connectCable": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecta el iPhone a la laptop con el cable y toca «Confiar» si aparece el aviso."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connect the iPhone to the laptop with the cable and tap “Trust” if prompted."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecte o iPhone ao laptop com o cabo e toque em “Confiar” se aparecer o aviso."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Branchez l’iPhone à l’ordinateur avec le câble et touchez « Se fier » si on vous le demande."
+          }
+        }
+      }
+    },
+    "guide.enterCredentials %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El navegador o el sistema pedirán usuario y contraseña la primera vez. Usuario: %@. La contraseña está en Ajustes."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The browser or the system will ask for a username and password the first time. Username: %@. The password is in Settings."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O navegador ou o sistema pedirá usuário e senha na primeira vez. Usuário: %@. A senha está em Ajustes."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le navigateur ou le système demandera un nom d’utilisateur et un mot de passe la première fois. Utilisateur : %@. Le mot de passe se trouve dans Réglages."
+          }
+        }
+      }
+    },
+    "guide.firefox": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En Firefox puedes configurarlo aparte: Ajustes > Configuración de red > Configuración manual del proxy > Proxy HTTP con esta dirección, y marca «Usar también este proxy para HTTPS»."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In Firefox you can set it separately: Settings > Network Settings > Manual proxy configuration > HTTP Proxy with this address, and check “Also use this proxy for HTTPS”."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Firefox você pode configurá-lo à parte: Configurações > Configurações de rede > Configuração manual de proxy > Proxy HTTP com este endereço, e marque “Usar também este proxy para HTTPS”."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dans Firefox, vous pouvez le régler à part : Paramètres > Paramètres réseau > Configuration manuelle du proxy > Proxy HTTP avec cette adresse, puis cochez « Utiliser également ce proxy pour HTTPS »."
+          }
+        }
+      }
+    },
+    "guide.installAppleDevices": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instala la app Apple Devices (o iTunes) para que Windows reconozca el iPhone."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Install the Apple Devices app (or iTunes) so Windows recognizes the iPhone."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instale o app Dispositivos Apple (ou o iTunes) para que o Windows reconheça o iPhone."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installez l’app Appareils Apple (ou iTunes) pour que Windows reconnaisse l’iPhone."
+          }
+        }
+      }
+    },
+    "guide.installGoIos": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instala go-ios (requiere Node.js) o descarga su binario desde GitHub:"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Install go-ios (requires Node.js) or download its binary from GitHub:"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instale o go-ios (requer Node.js) ou baixe o binário no GitHub:"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installez go-ios (nécessite Node.js) ou téléchargez son binaire depuis GitHub :"
+          }
+        }
+      }
+    },
+    "guide.installUsbmuxd": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instala usbmuxd para que Linux reconozca el iPhone:"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Install usbmuxd so Linux recognizes the iPhone:"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instale o usbmuxd para que o Linux reconheça o iPhone:"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installez usbmuxd pour que Linux reconnaisse l’iPhone :"
+          }
+        }
+      }
+    },
+    "guide.joinSameWiFi": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecta la laptop a la misma red Wi-Fi que el iPhone."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connect the laptop to the same Wi-Fi network as the iPhone."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecte o laptop à mesma rede Wi-Fi do iPhone."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connectez l’ordinateur au même réseau Wi-Fi que l’iPhone."
+          }
+        }
+      }
+    },
+    "guide.pac.linux": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En Configuración > Red > Proxy de red, elige «Automático» y pega esta dirección:"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In Settings > Network > Network Proxy, choose “Automatic” and paste this address:"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Em Configurações > Rede > Proxy de rede, escolha “Automático” e cole este endereço:"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dans Paramètres > Réseau > Serveur mandataire, choisissez « Automatique » et collez cette adresse :"
+          }
+        }
+      }
+    },
+    "guide.pac.macOS": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En Ajustes del Sistema > Red > Detalles > Proxies, activa «Configuración automática de proxy» y pega esta dirección:"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In System Settings > Network > Details > Proxies, turn on “Automatic proxy configuration” and paste this address:"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Em Ajustes do Sistema > Rede > Detalhes > Proxies, ative “Configuração automática de proxy” e cole este endereço:"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dans Réglages Système > Réseau > Détails > Proxys, activez « Configuration automatique du proxy » et collez cette adresse :"
+          }
+        }
+      }
+    },
+    "guide.pac.windows": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En Configuración > Red e Internet > Proxy, activa «Usar script de instalación» y pega esta dirección:"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In Settings > Network & Internet > Proxy, turn on “Use setup script” and paste this address:"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Em Configurações > Rede e Internet > Proxy, ative “Usar script de instalação” e cole este endereço:"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dans Paramètres > Réseau et Internet > Proxy, activez « Utiliser un script d’installation » et collez cette adresse :"
+          }
+        }
+      }
+    },
+    "guide.platform": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistema de la laptop"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laptop system"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistema do laptop"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Système de l’ordinateur"
+          }
+        }
+      }
+    },
+    "guide.runForward": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ejecuta este comando en la laptop y déjalo abierto mientras trabajas:"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Run this command on the laptop and keep it open while you work:"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Execute este comando no laptop e deixe-o aberto enquanto trabalha:"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exécutez cette commande sur l’ordinateur et laissez-la ouverte pendant que vous travaillez :"
+          }
+        }
+      }
+    },
+    "guide.steps.section": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasos"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Steps"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passos"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Étapes"
+          }
+        }
+      }
+    },
+    "guide.systemWideTunnel": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opcional: algunas apps de escritorio y VPN ignoran la configuración de proxy. Para ellas, consulta la guía de tun2socks en el repositorio del proyecto."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optional: some desktop apps and VPNs ignore the proxy settings. For those, see the tun2socks guide in the project repository."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opcional: alguns apps de computador e VPNs ignoram a configuração de proxy. Para eles, consulte o guia do tun2socks no repositório do projeto."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Facultatif : certaines apps pour ordinateur et certains VPN ignorent les réglages de proxy. Pour eux, consultez le guide tun2socks dans le dépôt du projet."
+          }
+        }
+      }
+    },
+    "guide.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instrucciones"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instructions"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instruções"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instructions"
+          }
+        }
+      }
+    },
+    "guide.verify": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprueba la conexión. Debe mostrar la IP de tu operador móvil:"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the connection. It should show your mobile carrier's IP:"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verifique a conexão. Deve aparecer o IP da sua operadora móvel:"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vérifiez la connexion. L’IP de votre opérateur mobile doit s’afficher :"
+          }
+        }
+      }
+    },
+    "home.action.start": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar proxy"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start proxy"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar proxy"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démarrer le proxy"
+          }
+        }
+      }
+    },
+    "home.action.stop": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detener proxy"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stop proxy"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parar proxy"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arrêter le proxy"
+          }
+        }
+      }
+    },
+    "home.activityLog": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actividad"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activity"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atividade"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activité"
+          }
+        }
+      }
+    },
+    "home.backgroundEnabled": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Funciona con la pantalla bloqueada"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Works with the screen locked"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Funciona com a tela bloqueada"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fonctionne écran verrouillé"
+          }
+        }
+      }
+    },
+    "home.cellularUnavailable": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin datos móviles: las conexiones fallarán hasta que vuelva la señal."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No mobile data: connections will fail until the signal returns."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem dados móveis: as conexões vão falhar até o sinal voltar."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas de données mobiles : les connexions échoueront jusqu’au retour du signal."
+          }
+        }
+      }
+    },
+    "home.connection.iphoneIP": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IP del iPhone"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iPhone IP"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IP do iPhone"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IP de l’iPhone"
+          }
+        }
+      }
+    },
+    "home.connection.pac": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archivo PAC"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PAC file"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arquivo PAC"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fichier PAC"
+          }
+        }
+      }
+    },
+    "home.connection.proxy": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy (HTTP y SOCKS5)"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy (HTTP and SOCKS5)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy (HTTP e SOCKS5)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy (HTTP et SOCKS5)"
+          }
+        }
+      }
+    },
+    "home.connection.section": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexión"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connection"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexão"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connexion"
+          }
+        }
+      }
+    },
+    "home.connection.wifiUnavailable": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El iPhone no está en una red Wi-Fi."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The iPhone isn't on a Wi-Fi network."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O iPhone não está em uma rede Wi-Fi."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’iPhone n’est pas sur un réseau Wi-Fi."
+          }
+        }
+      }
+    },
+    "home.failure.configuration": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La configuración no es válida. Revisa los ajustes."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The configuration is not valid. Review the settings."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A configuração não é válida. Revise os ajustes."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La configuration n’est pas valide. Vérifiez les réglages."
+          }
+        }
+      }
+    },
+    "home.failure.listener": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo iniciar el servidor. Inténtalo de nuevo."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The server could not start. Try again."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível iniciar o servidor. Tente novamente."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le serveur n’a pas pu démarrer. Réessayez."
+          }
+        }
+      }
+    },
+    "home.failure.localNetwork": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falta el permiso de red local. Actívalo en Ajustes > Privacidad y seguridad > Red local."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local network permission is missing. Turn it on in Settings > Privacy & Security > Local Network."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falta a permissão de rede local. Ative-a em Ajustes > Privacidade e Segurança > Rede Local."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’autorisation Réseau local manque. Activez-la dans Réglages > Confidentialité et sécurité > Réseau local."
+          }
+        }
+      }
+    },
+    "home.failure.network": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay conexión Wi-Fi. Conecta el iPhone a la misma red que la laptop."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "There is no Wi-Fi connection. Connect the iPhone to the same network as the laptop."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não há conexão Wi-Fi. Conecte o iPhone à mesma rede do laptop."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas de connexion Wi-Fi. Connectez l’iPhone au même réseau que l’ordinateur."
+          }
+        }
+      }
+    },
+    "home.failure.portUnavailable %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El puerto %lld está en uso. Cierra otras apps de proxy o cambia el puerto en Ajustes."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Port %lld is already in use. Close other proxy apps or change the port in Settings."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A porta %lld já está em uso. Feche outros apps de proxy ou mude a porta em Ajustes."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le port %lld est déjà utilisé. Fermez les autres apps de proxy ou changez le port dans Réglages."
+          }
+        }
+      }
+    },
+    "home.keepOpen": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén la app abierta"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep the app open"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantenha o app aberto"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gardez l’app ouverte"
+          }
+        }
+      }
+    },
+    "home.setupAssistant": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Asistente"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Assistant"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Assistente"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Assistant"
+          }
+        }
+      }
+    },
+    "home.signature.expired": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La firma caducó. Reinstala la app con Sideloadly o AltStore."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The signature has expired. Reinstall the app with Sideloadly or AltStore."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A assinatura expirou. Reinstale o app com o Sideloadly ou o AltStore."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La signature a expiré. Réinstallez l’app avec Sideloadly ou AltStore."
+          }
+        }
+      }
+    },
+    "home.signature.expires": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caduca"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expires"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expira"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expire"
+          }
+        }
+      }
+    },
+    "home.signature.expiringSoon": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Queda menos de un día. Renueva la firma con Sideloadly o AltStore para seguir usando la app."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Less than a day left. Renew the signature with Sideloadly or AltStore to keep using the app."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falta menos de um dia. Renove a assinatura com o Sideloadly ou o AltStore para continuar usando o app."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il reste moins d’un jour. Renouvelez la signature avec Sideloadly ou AltStore pour continuer à utiliser l’app."
+          }
+        }
+      }
+    },
+    "home.signature.notificationsDenied": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El recordatorio no se pudo programar porque las notificaciones están desactivadas para Hoply."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The reminder could not be scheduled because notifications are turned off for Hoply."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível agendar o lembrete porque as notificações do Hoply estão desativadas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le rappel n’a pas pu être programmé car les notifications de Hoply sont désactivées."
+          }
+        }
+      }
+    },
+    "home.status.connections %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld conexiones activas"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld active connections"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld conexões ativas"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld connexions actives"
+          }
+        }
+      }
+    },
+    "home.status.failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Con error"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erro"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erreur"
+          }
+        }
+      }
+    },
+    "home.status.running": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activo"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Running"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Em execução"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En marche"
+          }
+        }
+      }
+    },
+    "home.status.starting": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciando…"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starting…"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciando…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démarrage…"
+          }
+        }
+      }
+    },
+    "home.status.stopped": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detenido"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stopped"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arrêté"
+          }
+        }
+      }
+    },
+    "home.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply Proxy"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply Proxy"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply Proxy"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply Proxy"
+          }
+        }
+      }
+    },
+    "home.traffic.connections": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexiones atendidas"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connections served"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexões atendidas"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connexions servies"
+          }
+        }
+      }
+    },
+    "home.traffic.download": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Descarga"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réception"
+          }
+        }
+      }
+    },
+    "home.traffic.failures %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld fallidas"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld failed"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld com falha"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld en échec"
+          }
+        }
+      }
+    },
+    "home.traffic.rate %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@/s"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@/s"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@/s"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@/s"
+          }
+        }
+      }
+    },
+    "home.traffic.upload": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Subida"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upload"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upload"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoi"
+          }
+        }
+      }
+    },
+    "issue.clients.invalid %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "«%@» no es una dirección IPv4 o red válida."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@” is not a valid IPv4 address or network."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@” não é um endereço ou rede IPv4 válido."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "« %@ » n’est pas une adresse ou un réseau IPv4 valide."
+          }
+        }
+      }
+    },
+    "issue.clients.required": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En Wi-Fi debes autorizar al menos un equipo o red. Conecta el iPhone a la Wi-Fi para usar la red actual."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Over Wi-Fi you must authorize at least one device or network. Connect the iPhone to Wi-Fi to use the current network."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por Wi-Fi você deve autorizar pelo menos um dispositivo ou rede. Conecte o iPhone ao Wi-Fi para usar a rede atual."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En Wi-Fi, vous devez autoriser au moins un appareil ou un réseau. Connectez l’iPhone au Wi-Fi pour utiliser le réseau actuel."
+          }
+        }
+      }
+    },
+    "issue.clients.tooBroad %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "«%@» abarca demasiadas direcciones. Usa un prefijo de /8 o mayor."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@” covers too many addresses. Use a prefix of /8 or larger."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@” abrange endereços demais. Use um prefixo /8 ou maior."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "« %@ » couvre trop d’adresses. Utilisez un préfixe /8 ou plus."
+          }
+        }
+      }
+    },
+    "issue.clients.tooMany %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puedes autorizar como máximo %lld entradas."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You can authorize at most %lld entries."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Você pode autorizar no máximo %lld entradas."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vous pouvez autoriser au maximum %lld entrées."
+          }
+        }
+      }
+    },
+    "issue.idleTimeout": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El tiempo de inactividad no es válido."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The idle timeout is not valid."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O tempo de inatividade não é válido."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le délai d’inactivité n’est pas valide."
+          }
+        }
+      }
+    },
+    "issue.maximumConnections": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El número de conexiones simultáneas no es válido."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The number of simultaneous connections is not valid."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O número de conexões simultâneas não é válido."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le nombre de connexions simultanées n’est pas valide."
+          }
+        }
+      }
+    },
+    "issue.password": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La contraseña debe tener de 12 a 64 caracteres, sin espacios."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The password must have 12 to 64 characters, without spaces."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A senha deve ter de 12 a 64 caracteres, sem espaços."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le mot de passe doit comporter de 12 à 64 caractères, sans espaces."
+          }
+        }
+      }
+    },
+    "issue.persistence": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudieron guardar los ajustes. Inténtalo de nuevo."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The settings could not be saved. Try again."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível salvar os ajustes. Tente novamente."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les réglages n’ont pas pu être enregistrés. Réessayez."
+          }
+        }
+      }
+    },
+    "issue.port": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El puerto debe estar entre 1024 y 65535."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The port must be between 1024 and 65535."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A porta deve estar entre 1024 e 65535."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le port doit être compris entre 1024 et 65535."
+          }
+        }
+      }
+    },
+    "issue.username": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El usuario debe tener de 3 a 32 caracteres: letras, números, punto, guion o guion bajo."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The username must have 3 to 32 characters: letters, numbers, period, hyphen or underscore."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O usuário deve ter de 3 a 32 caracteres: letras, números, ponto, hífen ou sublinhado."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le nom d’utilisateur doit comporter de 3 à 32 caractères : lettres, chiffres, point, tiret ou tiret bas."
+          }
+        }
+      }
+    },
+    "log.authenticationFailed %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Credenciales incorrectas desde %@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wrong credentials from %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Credenciais incorretas de %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Identifiants incorrects depuis %@"
+          }
+        }
+      }
+    },
+    "log.automaticRestart": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La red cambió; el proxy se reinició automáticamente"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The network changed; the proxy restarted automatically"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A rede mudou; o proxy foi reiniciado automaticamente"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le réseau a changé ; le proxy a redémarré automatiquement"
+          }
+        }
+      }
+    },
+    "log.cellularLost": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se perdieron los datos móviles"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mobile data was lost"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Os dados móveis caíram"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les données mobiles ont été perdues"
+          }
+        }
+      }
+    },
+    "log.cellularRestored": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los datos móviles volvieron"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mobile data is back"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Os dados móveis voltaram"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les données mobiles sont revenues"
+          }
+        }
+      }
+    },
+    "log.clear": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrar"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limpar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Effacer"
+          }
+        }
+      }
+    },
+    "log.empty": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todavía no hay actividad."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No activity yet."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ainda não há atividade."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune activité pour l’instant."
+          }
+        }
+      }
+    },
+    "log.footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El registro se guarda solo en memoria y nunca incluye los sitios visitados."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The log is kept in memory only and never includes the sites visited."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O registro fica só na memória e nunca inclui os sites visitados."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le journal reste uniquement en mémoire et n’inclut jamais les sites visités."
+          }
+        }
+      }
+    },
+    "log.rejected.limit": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexión rechazada: se alcanzó el límite de conexiones simultáneas"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connection rejected: the simultaneous connection limit was reached"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexão recusada: o limite de conexões simultâneas foi atingido"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connexion refusée : la limite de connexions simultanées est atteinte"
+          }
+        }
+      }
+    },
+    "log.rejected.notAllowed %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexión rechazada de %@: no está en la lista de clientes autorizados"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connection rejected from %@: it is not in the authorized clients list"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexão recusada de %@: não está na lista de clientes autorizados"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connexion refusée depuis %@ : absent de la liste des clients autorisés"
+          }
+        }
+      }
+    },
+    "log.serverStarted %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy iniciado en el puerto %lld"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy started on port %lld"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy iniciado na porta %lld"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy démarré sur le port %lld"
+          }
+        }
+      }
+    },
+    "log.serverStopped": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy detenido"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy stopped"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy parado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proxy arrêté"
+          }
+        }
+      }
+    },
+    "log.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actividad"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activity"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atividade"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activité"
+          }
+        }
+      }
+    },
+    "log.unreachable.host": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un destino no se pudo alcanzar: el servidor no existe o no responde"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A destination could not be reached: the server does not exist or does not respond"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível alcançar um destino: o servidor não existe ou não responde"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une destination est injoignable : le serveur n’existe pas ou ne répond pas"
+          }
+        }
+      }
+    },
+    "log.unreachable.network": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un destino no se pudo alcanzar: no hay ruta por datos móviles"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A destination could not be reached: there is no route over mobile data"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível alcançar um destino: não há rota pelos dados móveis"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une destination est injoignable : aucune route par les données mobiles"
+          }
+        }
+      }
+    },
+    "log.unreachable.other": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo conectar con un destino"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could not connect to a destination"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível conectar a um destino"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de se connecter à une destination"
+          }
+        }
+      }
+    },
+    "log.unreachable.refused": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un destino rechazó la conexión"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A destination refused the connection"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um destino recusou a conexão"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une destination a refusé la connexion"
+          }
+        }
+      }
+    },
+    "log.unreachable.timeout": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un destino tardó demasiado en responder"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A destination took too long to respond"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Um destino demorou demais para responder"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une destination a mis trop de temps à répondre"
+          }
+        }
+      }
+    },
+    "reminder.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renuévala con Sideloadly o AltStore para seguir usando la app."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renew it with Sideloadly or AltStore to keep using the app."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renove com o Sideloadly ou o AltStore para continuar usando o app."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renouvelez-la avec Sideloadly ou AltStore pour continuer à utiliser l’app."
+          }
+        }
+      }
+    },
+    "reminder.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La firma de Hoply caduca mañana"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hoply's signature expires tomorrow"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A assinatura do Hoply expira amanhã"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La signature de Hoply expire demain"
+          }
+        }
+      }
+    },
+    "settings.auth.footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La contraseña se guarda en el Keychain del iPhone. Con el proxy HTTP, los navegadores piden las credenciales; con SOCKS5, solo los clientes que admiten autenticación."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The password is stored in the iPhone Keychain. With the HTTP proxy, browsers ask for the credentials; with SOCKS5, only clients that support authentication."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A senha fica guardada nas Chaves (Keychain) do iPhone. Com o proxy HTTP, os navegadores pedem as credenciais; com SOCKS5, só os clientes que suportam autenticação."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le mot de passe est enregistré dans le trousseau de l’iPhone. Avec le proxy HTTP, les navigateurs demandent les identifiants ; avec SOCKS5, seulement les clients qui gèrent l’authentification."
+          }
+        }
+      }
+    },
+    "settings.auth.password": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contraseña"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Password"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Senha"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mot de passe"
+          }
+        }
+      }
+    },
+    "settings.auth.regenerate": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generar nuevas credenciales"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generate new credentials"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gerar novas credenciais"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Générer de nouveaux identifiants"
+          }
+        }
+      }
+    },
+    "settings.auth.section": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autenticación"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authentication"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autenticação"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authentification"
+          }
+        }
+      }
+    },
+    "settings.auth.toggle": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exigir usuario y contraseña"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Require username and password"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exigir usuário e senha"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exiger un nom d’utilisateur et un mot de passe"
+          }
+        }
+      }
+    },
+    "settings.auth.username": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuario"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Username"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuário"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilisateur"
+          }
+        }
+      }
+    },
+    "settings.behavior.background": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seguir activo con la pantalla bloqueada"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep running with the screen locked"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continuar com a tela bloqueada"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continuer écran verrouillé"
+          }
+        }
+      }
+    },
+    "settings.behavior.footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El modo en segundo plano es experimental: reproduce audio en silencio para que iOS no suspenda la app y consume más batería. El recordatorio llega un día antes de que caduque la firma."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Background mode is experimental: it plays silent audio so iOS does not suspend the app, and it uses more battery. The reminder arrives one day before the signature expires."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O modo em segundo plano é experimental: reproduz um áudio silencioso para que o iOS não suspenda o app e consome mais bateria. O lembrete chega um dia antes de a assinatura expirar."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le mode arrière-plan est expérimental : il joue un son silencieux pour qu’iOS ne suspende pas l’app et consomme plus de batterie. Le rappel arrive un jour avant l’expiration de la signature."
+          }
+        }
+      }
+    },
+    "settings.behavior.reminder": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recordarme renovar la firma"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remind me to renew the signature"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lembrar de renovar a assinatura"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Me rappeler de renouveler la signature"
+          }
+        }
+      }
+    },
+    "settings.behavior.section": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Funcionamiento"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Behavior"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comportamento"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comportement"
+          }
+        }
+      }
+    },
+    "settings.clients.add": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adicionar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter"
+          }
+        }
+      }
+    },
+    "settings.clients.addSuggested %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autorizar la red actual (%@)"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authorize the current network (%@)"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autorizar a rede atual (%@)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autoriser le réseau actuel (%@)"
+          }
+        }
+      }
+    },
+    "settings.clients.footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En Wi-Fi solo se aceptan conexiones de estas direcciones."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Over Wi-Fi only connections from these addresses are accepted."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Por Wi-Fi só são aceitas conexões destes endereços."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En Wi-Fi, seules les connexions depuis ces adresses sont acceptées."
+          }
+        }
+      }
+    },
+    "settings.clients.placeholder": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IP o red, p. ej. 192.168.1.0/24"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IP or network, e.g. 192.168.1.0/24"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IP ou rede, ex.: 192.168.1.0/24"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IP ou réseau, ex. 192.168.1.0/24"
+          }
+        }
+      }
+    },
+    "settings.clients.section": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clientes autorizados"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authorized clients"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clientes autorizados"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clients autorisés"
+          }
+        }
+      }
+    },
+    "settings.connection.section": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexión"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connection"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexão"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connexion"
+          }
+        }
+      }
+    },
+    "settings.idleTimeout": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cierre por inactividad"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idle timeout"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tempo de inatividade"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Délai d’inactivité"
+          }
+        }
+      }
+    },
+    "settings.limits.section": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Límites"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limits"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limites"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limites"
+          }
+        }
+      }
+    },
+    "settings.maximumConnections": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexiones simultáneas"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Simultaneous connections"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conexões simultâneas"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connexions simultanées"
+          }
+        }
+      }
+    },
+    "settings.port": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puerto"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Port"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Porta"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Port"
+          }
+        }
+      }
+    },
+    "settings.restartNotice": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El proxy se reiniciará al guardar."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The proxy will restart when you save."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O proxy será reiniciado ao salvar."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le proxy redémarrera à l’enregistrement."
+          }
+        }
+      }
+    },
+    "settings.seconds %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld s"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld s"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld s"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld s"
+          }
+        }
+      }
+    },
+    "settings.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages"
+          }
+        }
+      }
+    },
+    "settings.transport": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modo"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mode"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mode"
+          }
+        }
+      }
+    },
+    "setup.back": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atrás"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voltar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retour"
+          }
+        }
+      }
+    },
+    "setup.finishWithoutStarting": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminar sin iniciar"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finish without starting"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Concluir sem iniciar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminer sans démarrer"
+          }
+        }
+      }
+    },
+    "setup.laptop.desktopApp": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Con Hoply Desktop"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "With Hoply Desktop"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Com o Hoply Desktop"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avec Hoply Desktop"
+          }
+        }
+      }
+    },
+    "setup.laptop.header": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En la laptop"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On the laptop"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No laptop"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sur l’ordinateur"
+          }
+        }
+      }
+    },
+    "setup.laptop.instruction.usb": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecta el cable, abre la app en la laptop, elige USB y pulsa Conectar."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plug in the cable, open the app on the laptop, choose USB and click Connect."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecte o cabo, abra o app no laptop, escolha USB e clique em Conectar."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Branchez le câble, ouvrez l’app sur l’ordinateur, choisissez USB et cliquez sur Connecter."
+          }
+        }
+      }
+    },
+    "setup.laptop.instruction.wifi": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre la app en la laptop, elige Wi-Fi, escribe esta IP y pulsa Conectar."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open the app on the laptop, choose Wi-Fi, enter this IP and click Connect."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abra o app no laptop, escolha Wi-Fi, digite este IP e clique em Conectar."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrez l’app sur l’ordinateur, choisissez Wi-Fi, saisissez cette IP et cliquez sur Connecter."
+          }
+        }
+      }
+    },
+    "setup.laptop.manual": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configurar a mano"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set up manually"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configurar manualmente"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configurer à la main"
+          }
+        }
+      }
+    },
+    "setup.laptop.manual.detail": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin la app de escritorio"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Without the desktop app"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem o app para computador"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sans l’app pour ordinateur"
+          }
+        }
+      }
+    },
+    "setup.next": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siguiente"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avançar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suivant"
+          }
+        }
+      }
+    },
+    "setup.progress %lld %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paso %lld de %lld"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step %lld of %lld"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passo %lld de %lld"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Étape %lld sur %lld"
+          }
+        }
+      }
+    },
+    "setup.startProxy": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar proxy"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start proxy"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar proxy"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démarrer le proxy"
+          }
+        }
+      }
+    },
+    "setup.summary.footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantén la app abierta mientras trabajas."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep the app open while you work."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantenha o app aberto enquanto trabalha."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gardez l’app ouverte pendant que vous travaillez."
+          }
+        }
+      }
+    },
+    "setup.summary.header": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo listo"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All set"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tudo pronto"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tout est prêt"
+          }
+        }
+      }
+    },
+    "setup.transport.header": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Cómo conectas la laptop?"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How do you connect the laptop?"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Como você conecta o laptop?"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comment connectez-vous l’ordinateur ?"
+          }
+        }
+      }
+    },
+    "setup.wifi.network %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Red Wi-Fi del iPhone: %@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iPhone's Wi-Fi network: %@"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rede Wi-Fi do iPhone: %@"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réseau Wi-Fi de l’iPhone : %@"
+          }
+        }
+      }
+    },
+    "setup.wifi.notConnected": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecta el iPhone a la red Wi-Fi de la laptop."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connect the iPhone to the laptop's Wi-Fi network."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conecte o iPhone à rede Wi-Fi do laptop."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connectez l’iPhone au réseau Wi-Fi de l’ordinateur."
+          }
+        }
+      }
+    },
+    "transport.usb": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB"
+          }
+        }
+      }
+    },
+    "transport.usb.description": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Con cable. La opción más estable."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wired. The most stable option."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Com cabo. A opção mais estável."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avec câble. L’option la plus stable."
+          }
+        }
+      }
+    },
+    "transport.wifi": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wi-Fi"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wi-Fi"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wi-Fi"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wi-Fi"
+          }
+        }
+      }
+    },
+    "transport.wifi.description": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin cable, en la misma red Wi-Fi."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wireless, on the same Wi-Fi network."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sem fio, na mesma rede Wi-Fi."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sans fil, sur le même réseau Wi-Fi."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

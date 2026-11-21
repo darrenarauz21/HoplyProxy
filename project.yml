@@ -1,0 +1,58 @@
+name: Hoply
+
+options:
+  bundleIdPrefix: io.relaynest
+  developmentLanguage: es
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    MARKETING_VERSION: "0.4.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.0"
+
+packages:
+  ProxyCore:
+    path: Packages/ProxyCore
+  ProxyConfig:
+    path: Packages/ProxyConfig
+
+targets:
+  Hoply:
+    type: application
+    platform: iOS
+    sources:
+      - path: App/Sources
+      - path: App/Resources
+    dependencies:
+      - package: ProxyCore
+        product: ProxyCore
+      - package: ProxyConfig
+        product: ProxyConfig
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Hoply
+        CFBundleDevelopmentRegion: $(DEVELOPMENT_LANGUAGE)
+        CFBundleLocalizations:
+          - es
+          - en
+          - pt-BR
+          - fr
+        NSLocalNetworkUsageDescription: Hoply acepta conexiones de tu laptop en la red Wi-Fi local para compartir los datos móviles del iPhone.
+        UIBackgroundModes:
+          - audio
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: io.relaynest.hoply
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: NO
+    scheme: {}

@@ -1,0 +1,75 @@
+name: Build Desktop
+
+# Se ejecuta de forma manual desde la pestaña Actions o desde el workflow Release.
+on:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+jobs:
+  test:
+    name: Pruebas
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Pruebas de Hoply Desktop
+        run: dotnet test Desktop/Hoply.Desktop.slnx --configuration Release
+
+  publish:
+    name: Publicar ${{ matrix.rid }}
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      matrix:
+        rid: [win-x64, osx-arm64, osx-x64, linux-x64]
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Publicar ejecutable autónomo
+        run: >
+          dotnet publish Desktop/src/Hoply.Desktop/Hoply.Desktop.csproj
+          --configuration Release
+          --runtime ${{ matrix.rid }}
+          --self-contained true
+          -p:PublishSingleFile=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+          -p:DebugType=none
+          --output "$RUNNER_TEMP/publish"
+
+      # zip en Windows; tar.gz en macOS y Linux para conservar el permiso de ejecución.
+      - name: Empaquetar
+        env:
+          RID: ${{ matrix.rid }}
+        run: |
+          mkdir -p dist
+          cd "$RUNNER_TEMP/publish"
+          if [[ "$RID" == win-* ]]; then
+            zip -qr "$GITHUB_WORKSPACE/dist/Hoply-Desktop-$RID.zip" .
+          else
+            chmod +x Hoply
+            tar -czf "$GITHUB_WORKSPACE/dist/Hoply-Desktop-$RID.tar.gz" .
+          fi
+
+      - name: Publicar artefacto
+        uses: actions/upload-artifact@v5
+        with:
+          name: Hoply-Desktop-${{ matrix.rid }}
+          path: dist/*
+          retention-days: 7

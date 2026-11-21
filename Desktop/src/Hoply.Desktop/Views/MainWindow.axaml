@@ -1,0 +1,187 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Hoply.Desktop.ViewModels"
+        xmlns:l="using:Hoply.Desktop.Localization"
+        x:Class="Hoply.Desktop.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Title="Hoply Proxy"
+        Icon="/Assets/app.ico"
+        Width="400"
+        Height="620"
+        CanResize="False"
+        ShowInTaskbar="False"
+        SystemDecorations="None"
+        TransparencyLevelHint="Transparent"
+        Background="Transparent"
+        Topmost="True"
+        WindowStartupLocation="Manual"
+        Foreground="{DynamicResource Tp.Text}"
+        FontSize="13">
+
+  <Border Classes="shell">
+    <Grid RowDefinitions="Auto,*,Auto">
+
+      <!-- Encabezado: se arrastra desde aquí y se oculta con la flecha. -->
+      <Grid Grid.Row="0" ColumnDefinitions="Auto,*,Auto,Auto" Margin="16,14,10,10"
+            PointerPressed="OnHeaderPointerPressed">
+        <Border Classes="brand">
+          <Image Source="/Assets/logo.png" Width="22" Height="22" RenderOptions.BitmapInterpolationMode="None" />
+        </Border>
+        <StackPanel Grid.Column="1" Margin="11,0,8,0" VerticalAlignment="Center" Spacing="1">
+          <TextBlock Classes="title" Text="Hoply Proxy" />
+          <TextBlock Classes="caption" Text="{l:T app.subtitle}" TextWrapping="NoWrap"
+                     TextTrimming="CharacterEllipsis" />
+        </StackPanel>
+        <Button Grid.Column="2" Classes="iconButton" Command="{Binding OpenDocumentationCommand}"
+                ToolTip.Tip="{l:T action.help}" AutomationProperties.Name="{l:T action.help}">
+          <Path Classes="icon small" Data="{StaticResource Icon.Help}" />
+        </Button>
+        <Button Grid.Column="3" Classes="iconButton" Click="OnHideClick"
+                ToolTip.Tip="{l:T action.hide}" AutomationProperties.Name="{l:T action.hide}">
+          <Path Classes="icon small" Data="{StaticResource Icon.ChevronDown}" />
+        </Button>
+      </Grid>
+
+      <ScrollViewer x:Name="ContentScroller" Grid.Row="1" HorizontalScrollBarVisibility="Disabled"
+                    VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="16,0,16,12" Spacing="12">
+
+          <!-- Estado -->
+          <Border Classes="card">
+            <StackPanel Spacing="11">
+              <Border Classes="signal"
+                      Classes.busy="{Binding IsStatusBusy}"
+                      Classes.ok="{Binding IsStatusOk}"
+                      Classes.warning="{Binding IsStatusWarning}"
+                      Classes.error="{Binding IsStatusError}" />
+              <Grid ColumnDefinitions="Auto,*">
+                <Border Classes="orb"
+                        Classes.busy="{Binding IsStatusBusy}"
+                        Classes.ok="{Binding IsStatusOk}"
+                        Classes.warning="{Binding IsStatusWarning}"
+                        Classes.error="{Binding IsStatusError}">
+                  <Panel>
+                    <Path Classes="icon large" Data="{StaticResource Icon.Power}" IsVisible="{Binding ShowsPowerIcon}" />
+                    <Path Classes="icon large" Data="{StaticResource Icon.Link}" IsVisible="{Binding ShowsLinkIcon}" />
+                    <Path Classes="icon large" Data="{StaticResource Icon.Alert}" IsVisible="{Binding ShowsAlertIcon}" />
+                  </Panel>
+                </Border>
+                <StackPanel Grid.Column="1" Margin="12,0,0,0" VerticalAlignment="Center" Spacing="2">
+                  <TextBlock Classes="heading" Text="{Binding StatusTitle}" TextWrapping="Wrap" />
+                  <TextBlock Classes="caption" Text="{Binding StatusDetail}" TextWrapping="Wrap"
+                             IsVisible="{Binding HasStatusDetail}" />
+                </StackPanel>
+              </Grid>
+            </StackPanel>
+          </Border>
+
+          <!-- Modo de conexión -->
+          <StackPanel Spacing="7">
+            <TextBlock Classes="section" Text="{l:T mode.header}" />
+            <Grid ColumnDefinitions="*,9,*">
+              <Button Classes="option" Classes.selected="{Binding IsUsb}" Command="{Binding SelectUsbCommand}">
+                <Grid ColumnDefinitions="Auto,*">
+                  <Path Classes="icon" Data="{StaticResource Icon.Cable}" />
+                  <StackPanel Grid.Column="1" Margin="9,0,0,0" Spacing="1">
+                    <TextBlock Classes="strong" Text="{l:T mode.usb}" />
+                    <TextBlock Classes="caption" Text="{l:T mode.usb.hint}" />
+                  </StackPanel>
+                </Grid>
+              </Button>
+              <Button Grid.Column="2" Classes="option" Classes.selected="{Binding IsWiFi}"
+                      Command="{Binding SelectWiFiCommand}">
+                <Grid ColumnDefinitions="Auto,*">
+                  <Path Classes="icon" Data="{StaticResource Icon.WiFi}" />
+                  <StackPanel Grid.Column="1" Margin="9,0,0,0" Spacing="1">
+                    <TextBlock Classes="strong" Text="{l:T mode.wifi}" />
+                    <TextBlock Classes="caption" Text="{l:T mode.wifi.hint}" />
+                  </StackPanel>
+                </Grid>
+              </Button>
+            </Grid>
+          </StackPanel>
+
+          <!-- iPhone por cable -->
+          <Border Classes="card compact" IsVisible="{Binding IsUsb}">
+            <Grid ColumnDefinitions="Auto,*,Auto">
+              <Path Classes="icon small" Data="{StaticResource Icon.Phone}" />
+              <TextBlock Grid.Column="1" Margin="10,0" VerticalAlignment="Center" FontSize="12"
+                         TextWrapping="Wrap" Text="{Binding DeviceStatusText}" />
+              <Ellipse Grid.Column="2" Classes="dot" Classes.on="{Binding IsDeviceConnected}" />
+            </Grid>
+          </Border>
+
+          <!-- iPhone por Wi-Fi -->
+          <StackPanel Spacing="6" IsVisible="{Binding IsWiFi}">
+            <TextBlock Classes="label" Text="{l:T wifi.host.label}" />
+            <TextBox Text="{Binding WiFiHost}" Watermark="192.168.1.20" MaxLength="15" IsEnabled="{Binding CanEdit}" />
+            <TextBlock Classes="caption" Text="{l:T wifi.host.hint}" />
+          </StackPanel>
+
+          <!-- Proxy del sistema -->
+          <Border Classes="card compact">
+            <Grid ColumnDefinitions="Auto,*,Auto">
+              <Path Classes="icon small" Data="{StaticResource Icon.Globe}" />
+              <StackPanel Grid.Column="1" Margin="10,0" VerticalAlignment="Center" Spacing="1">
+                <TextBlock Classes="strong" FontSize="12.5" Text="{l:T systemProxy.title}" />
+                <TextBlock Classes="caption" Text="{Binding SystemProxyHint}" />
+              </StackPanel>
+              <ToggleSwitch Grid.Column="2" MinWidth="0" OnContent="{x:Null}" OffContent="{x:Null}"
+                            IsChecked="{Binding ConfigureSystemProxy}" IsEnabled="{Binding CanEditSystemProxy}"
+                            AutomationProperties.Name="{l:T systemProxy.title}" />
+            </Grid>
+          </Border>
+
+          <!-- Avanzado -->
+          <Border Classes="card compact">
+            <StackPanel IsEnabled="{Binding CanEdit}">
+              <ToggleButton x:Name="AdvancedToggle" Classes="advancedHeader"
+                            Checked="OnAdvancedToggled" Unchecked="OnAdvancedToggled">
+                <Grid ColumnDefinitions="*,Auto">
+                  <TextBlock Text="{l:T advanced.header}" VerticalAlignment="Center" />
+                  <Panel Grid.Column="1">
+                    <Path Classes="icon small down" Data="{StaticResource Icon.ChevronDown}" />
+                    <Path Classes="icon small up" Data="{StaticResource Icon.ChevronUp}" />
+                  </Panel>
+                </Grid>
+              </ToggleButton>
+              <StackPanel x:Name="AdvancedContent" IsVisible="False" Spacing="6" Margin="0,6,0,1">
+                <Border Classes="divider" Margin="0,1,0,3" />
+                <Grid ColumnDefinitions="Auto,*">
+                  <TextBlock Classes="label" Text="{l:T advanced.port}" VerticalAlignment="Center" />
+                  <TextBox Grid.Column="1" Margin="10,0,0,0" Text="{Binding PortText}" Width="100"
+                           MaxLength="5" HorizontalAlignment="Left" />
+                </Grid>
+                <TextBlock Classes="caption" Text="{l:T advanced.port.hint}" />
+              </StackPanel>
+            </StackPanel>
+          </Border>
+
+          <TextBlock Classes="error" Text="{Binding ValidationMessage}" IsVisible="{Binding HasValidationMessage}" />
+        </StackPanel>
+      </ScrollViewer>
+
+      <!-- Acciones, fijas al pie como en el panel de la bandeja. -->
+      <Border Grid.Row="2" Classes="footer">
+        <StackPanel Spacing="8">
+          <Button Classes="primary" Classes.connected="{Binding IsConnected}"
+                  Command="{Binding ToggleConnectionCommand}" Content="{Binding PrimaryActionText}" />
+          <Grid ColumnDefinitions="*,Auto">
+            <Button Classes="link" HorizontalAlignment="Left" Command="{Binding CopyTerminalCommand}">
+              <StackPanel Orientation="Horizontal" Spacing="6">
+                <Path Classes="icon small" Data="{StaticResource Icon.Terminal}" />
+                <TextBlock VerticalAlignment="Center" Text="{Binding TerminalButtonText}" />
+              </StackPanel>
+            </Button>
+            <Button Grid.Column="1" Classes="link" Command="{Binding VerifyCommand}" IsVisible="{Binding IsConnected}">
+              <StackPanel Orientation="Horizontal" Spacing="6">
+                <Path Classes="icon small" Data="{StaticResource Icon.Refresh}" />
+                <TextBlock VerticalAlignment="Center" Text="{l:T action.verify}" />
+              </StackPanel>
+            </Button>
+          </Grid>
+        </StackPanel>
+      </Border>
+    </Grid>
+  </Border>
+</Window>

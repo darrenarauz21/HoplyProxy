@@ -1,0 +1,65 @@
+name: Build IPA
+
+# Se ejecuta de forma manual desde la pestaña Actions o desde el workflow Release.
+on:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  test-packages:
+    name: Pruebas de paquetes
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Pruebas de ProxyCore
+        working-directory: Packages/ProxyCore
+        run: swift test
+
+      - name: Pruebas de ProxyConfig
+        working-directory: Packages/ProxyConfig
+        run: swift test
+
+  build-ipa:
+    name: Compilar IPA sin firmar
+    needs: test-packages
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Instalar XcodeGen
+        run: brew install xcodegen
+
+      - name: Generar proyecto de Xcode
+        run: xcodegen generate
+
+      - name: Archivar
+        run: |
+          xcodebuild archive \
+            -project Hoply.xcodeproj \
+            -scheme Hoply \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$RUNNER_TEMP/Hoply.xcarchive" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY=""
+
+      - name: Empaquetar IPA
+        run: |
+          mkdir -p "$RUNNER_TEMP/ipa/Payload"
+          cp -R "$RUNNER_TEMP/Hoply.xcarchive/Products/Applications/Hoply.app" "$RUNNER_TEMP/ipa/Payload/"
+          cd "$RUNNER_TEMP/ipa"
+          zip -qry Hoply.ipa Payload
+
+      - name: Publicar artefacto
+        uses: actions/upload-artifact@v5
+        with:
+          name: Hoply-ipa
+          path: ${{ runner.temp }}/ipa/Hoply.ipa
+          retention-days: 7

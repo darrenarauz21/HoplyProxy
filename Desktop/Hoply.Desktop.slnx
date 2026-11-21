@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Hoply.Desktop.Core/Hoply.Desktop.Core.csproj" />
+    <Project Path="src/Hoply.Desktop/Hoply.Desktop.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Hoply.Desktop.Tests/Hoply.Desktop.Tests.csproj" />
+  </Folder>
+</Solution>
