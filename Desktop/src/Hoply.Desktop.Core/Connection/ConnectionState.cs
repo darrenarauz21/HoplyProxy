@@ -13,4 +13,5 @@ public enum ConnectionState
 /// <summary>Resultado de conectar.</summary>
 /// <param name="PublicAddress">IP pública vista a través del iPhone; null si no se pudo verificar.</param>
 /// <param name="SystemProxyApplied">El proxy del sistema quedó configurado.</param>
-public sealed record ConnectionReport(IPAddress? PublicAddress, bool SystemProxyApplied);
+/// <param name="EnvironmentProxyApplied">Las variables de entorno del usuario quedaron definidas.</param>
+public sealed record ConnectionReport(IPAddress? PublicAddress, bool SystemProxyApplied, bool EnvironmentProxyApplied);

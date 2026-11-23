@@ -15,7 +15,8 @@ public struct ProxySettings: Codable, Equatable, Sendable {
     public var allowedClients: [String]
     public var maximumConnections: Int
     public var idleTimeoutSeconds: Int
-    /// Mantiene la app activa con la pantalla bloqueada mediante audio en silencio. Experimental.
+    /// Mantiene la app activa con la pantalla bloqueada mediante audio en silencio. Activo por defecto: sin él,
+    /// iOS suspende la app al bloquear el iPhone y el proxy deja de responder.
     public var keepsRunningInBackground: Bool
     /// Programa una notificación local antes de que caduque la firma de la app.
     public var remindsBeforeSignatureExpiry: Bool
@@ -28,7 +29,7 @@ public struct ProxySettings: Codable, Equatable, Sendable {
         allowedClients: [],
         maximumConnections: 64,
         idleTimeoutSeconds: 300,
-        keepsRunningInBackground: false,
+        keepsRunningInBackground: true,
         remindsBeforeSignatureExpiry: false
     )
 

@@ -49,6 +49,16 @@ Con la opción **Proxy del sistema** activa, la app configura el proxy automáti
 
 Desactívala si prefieres configurar cada app a mano.
 
+### Variables para terminal y apps de desarrollo
+
+Claude Code, Codex, Claupet, `npm`, `git` y en general las herramientas hechas con Node.js no leen el proxy automático del sistema: solo usan las variables `HTTP_PROXY` y `HTTPS_PROXY`. Con esta opción activa (solo en Windows), al conectar la app define para tu usuario `HTTP_PROXY`, `HTTPS_PROXY`, `NO_PROXY` (direcciones locales) y `NODE_USE_ENV_PROXY=1`, y al desconectar deja los valores que tenías. Si la app se cierra de golpe, los restaura la próxima vez que la abras.
+
+Las variables solo llegan a los programas que se abren **después** de conectar: reinicia Claupet, la terminal o el editor tras pulsar **Conectar**. No requiere permisos de administrador.
+
+### Reconexión automática
+
+Mientras estás conectado, la app pide cada 5 segundos el archivo PAC al iPhone (no gasta datos móviles) y lo vuelve a comprobar al instante si cambia la red de la laptop o falla el cable. Si el iPhone deja de responder, muestra **Reconectando…** y reintenta cada 2 segundos sin que hagas nada; cuando vuelve, reactiva el proxy del sistema para que los navegadores dejen la conexión directa y muestra de nuevo tu IP pública. En el contador de conexiones del iPhone verás estas comprobaciones.
+
 ### Terminal
 
 **Copiar para la terminal** copia la línea que hace que `git`, `npm`, `curl` y otras herramientas usen el proxy en la terminal actual:
@@ -76,6 +86,8 @@ El puerto debe ser el mismo que en **Ajustes** de la app del iPhone (por defecto
 | El puerto 1080 ya está en uso | Otro programa (por ejemplo, `ios forward` de go-ios) usa ese puerto. Ciérralo o cambia el puerto en ambas apps. |
 | Conectado sin verificar | El proxy no está iniciado en el iPhone, la app del iPhone está en segundo plano o no hay datos móviles. |
 | El iPhone no responde | Se desconectó el cable o se detuvo el proxy en el iPhone. |
+| Reconectando… | El iPhone dejó de responder; la app reintenta sola. Desbloquea el iPhone y comprueba que Hoply siga abierto con el proxy iniciado y, para usarlo con la pantalla bloqueada, que **Seguir activo con la pantalla bloqueada** esté activo en Ajustes. |
+| Claude Code, Codex o `npm` no salen por el iPhone | Activa **Variables para terminal y apps de desarrollo**, conecta y reinicia esas apps. |
 | Revisa el proxy del sistema | No se pudo restaurar el proxy anterior. Ábrelo en la configuración de red del sistema y desactiva el proxy automático. |
 
 ## Arquitectura

@@ -17,6 +17,7 @@ public sealed class AppPathsTests : IDisposable
 
         Assert.Equal(Path.Combine(_dataRoot, "Hoply", "settings.json"), paths.SettingsFile);
         Assert.Equal(Path.Combine(_dataRoot, "Hoply", "proxy-recovery.json"), paths.RecoveryFile);
+        Assert.Equal(Path.Combine(_dataRoot, "Hoply", "environment-recovery.json"), paths.EnvironmentRecoveryFile);
     }
 
     [Fact]

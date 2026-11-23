@@ -12,8 +12,13 @@ struct RootView: View {
                 SetupFlowView(controller: controller)
             }
             .onChange(of: scenePhase) { phase in
-                if phase == .active {
-                    controller.refreshNetwork()
+                switch phase {
+                case .active:
+                    controller.appDidBecomeActive()
+                case .background:
+                    controller.appDidEnterBackground()
+                default:
+                    break
                 }
             }
     }

@@ -11,6 +11,8 @@ public enum ConnectionFailure
     /// <summary>Otro programa ya usa el puerto local.</summary>
     PortInUse,
     SystemProxyFailed,
+    /// <summary>No se pudieron definir las variables de entorno del usuario.</summary>
+    EnvironmentProxyFailed,
 }
 
 public sealed class ConnectionException : Exception

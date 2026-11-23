@@ -132,6 +132,20 @@
             </Grid>
           </Border>
 
+          <!-- Variables de entorno: Claude Code, Codex, git, npm… -->
+          <Border Classes="card compact">
+            <Grid ColumnDefinitions="Auto,*,Auto">
+              <Path Classes="icon small" Data="{StaticResource Icon.Terminal}" />
+              <StackPanel Grid.Column="1" Margin="10,0" VerticalAlignment="Center" Spacing="1">
+                <TextBlock Classes="strong" FontSize="12.5" Text="{l:T environmentProxy.title}" />
+                <TextBlock Classes="caption" Text="{Binding EnvironmentProxyHint}" />
+              </StackPanel>
+              <ToggleSwitch Grid.Column="2" MinWidth="0" OnContent="{x:Null}" OffContent="{x:Null}"
+                            IsChecked="{Binding ConfigureEnvironmentProxy}" IsEnabled="{Binding CanEditEnvironmentProxy}"
+                            AutomationProperties.Name="{l:T environmentProxy.title}" />
+            </Grid>
+          </Border>
+
           <!-- Avanzado -->
           <Border Classes="card compact">
             <StackPanel IsEnabled="{Binding CanEdit}">

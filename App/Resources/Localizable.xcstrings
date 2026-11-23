@@ -4003,6 +4003,122 @@
         }
       }
     },
+    "log.backgroundModeOn": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modo en segundo plano activo: el proxy sigue con la pantalla bloqueada"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Background mode on: the proxy keeps running with the screen locked"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modo em segundo plano ativo: o proxy continua com a tela bloqueada"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mode arrière-plan actif : le proxy continue écran verrouillé"
+          }
+        }
+      }
+    },
+    "log.backgroundModeFailed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo activar el modo en segundo plano; con la pantalla bloqueada el proxy se pausará"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't turn on background mode; the proxy will pause when the screen locks"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Não foi possível ativar o modo em segundo plano; com a tela bloqueada o proxy será pausado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible d’activer le mode arrière-plan ; le proxy se mettra en pause écran verrouillé"
+          }
+        }
+      }
+    },
+    "log.backgroundModeResumed": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El audio en segundo plano se interrumpió y se reanudó"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Background audio was interrupted and resumed"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O áudio em segundo plano foi interrompido e retomado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’audio en arrière-plan a été interrompu puis a repris"
+          }
+        }
+      }
+    },
+    "log.pausedInBackground": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La app pasó a segundo plano sin el modo en segundo plano: iOS pausará el proxy hasta que vuelva a abrirla"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The app went to the background without background mode: iOS will pause the proxy until you open it again"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O app foi para segundo plano sem o modo em segundo plano: o iOS pausará o proxy até você abri-lo de novo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’app est passée en arrière-plan sans le mode arrière-plan : iOS mettra le proxy en pause jusqu’à sa réouverture"
+          }
+        }
+      }
+    },
     "log.clear": {
       "extractionState": "manual",
       "localizations": {
@@ -4647,25 +4763,25 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "El modo en segundo plano es experimental: reproduce audio en silencio para que iOS no suspenda la app y consume más batería. El recordatorio llega un día antes de que caduque la firma."
+            "value": "Con el modo en segundo plano, Hoply reproduce audio en silencio para que iOS no suspenda la app al bloquear la pantalla. No pide ningún permiso y consume más batería. El recordatorio llega un día antes de que caduque la firma."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Background mode is experimental: it plays silent audio so iOS does not suspend the app, and it uses more battery. The reminder arrives one day before the signature expires."
+            "value": "With background mode, Hoply plays silent audio so iOS does not suspend the app when the screen locks. It asks for no permission and uses more battery. The reminder arrives one day before the signature expires."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "O modo em segundo plano é experimental: reproduz um áudio silencioso para que o iOS não suspenda o app e consome mais bateria. O lembrete chega um dia antes de a assinatura expirar."
+            "value": "Com o modo em segundo plano, o Hoply reproduz um áudio silencioso para que o iOS não suspenda o app ao bloquear a tela. Não pede nenhuma permissão e consome mais bateria. O lembrete chega um dia antes de a assinatura expirar."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Le mode arrière-plan est expérimental : il joue un son silencieux pour qu’iOS ne suspende pas l’app et consomme plus de batterie. Le rappel arrive un jour avant l’expiration de la signature."
+            "value": "Avec le mode arrière-plan, Hoply joue un son silencieux pour qu’iOS ne suspende pas l’app quand l’écran se verrouille. Il ne demande aucune autorisation et consomme plus de batterie. Le rappel arrive un jour avant l’expiration de la signature."
           }
         }
       }

@@ -1,7 +1,7 @@
 namespace Hoply.Desktop.Core.Storage;
 
 /// <summary>Archivos de la app en la carpeta de datos del usuario.</summary>
-public sealed record AppPaths(string SettingsFile, string RecoveryFile)
+public sealed record AppPaths(string SettingsFile, string RecoveryFile, string EnvironmentRecoveryFile)
 {
     private const string FolderName = "Hoply";
 
@@ -19,7 +19,10 @@ public sealed record AppPaths(string SettingsFile, string RecoveryFile)
     {
         var root = Path.Combine(dataRoot, FolderName);
         MigrateLegacyFolder(Path.Combine(dataRoot, LegacyFolderName), root);
-        return new AppPaths(Path.Combine(root, "settings.json"), Path.Combine(root, "proxy-recovery.json"));
+        return new AppPaths(
+            Path.Combine(root, "settings.json"),
+            Path.Combine(root, "proxy-recovery.json"),
+            Path.Combine(root, "environment-recovery.json"));
     }
 
     private static void MigrateLegacyFolder(string legacyRoot, string root)
