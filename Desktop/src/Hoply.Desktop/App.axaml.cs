@@ -31,7 +31,10 @@ public sealed partial class App : Application
                 usbmux,
                 SystemProxyConfiguratorFactory.CreateForCurrentPlatform(),
                 new ProxyRecoveryStore(paths.RecoveryFile),
-                new ConnectionVerifier());
+                new ConnectionVerifier(),
+                EnvironmentProxyConfiguratorFactory.CreateForCurrentPlatform(),
+                new ProxyRecoveryStore(paths.EnvironmentRecoveryFile),
+                new PacProxyProbe());
 
             var window = new MainWindow();
             window.DataContext = new MainViewModel(connection, usbmux, new SettingsStore(paths.SettingsFile), window);

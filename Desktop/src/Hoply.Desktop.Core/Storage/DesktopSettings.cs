@@ -13,6 +13,9 @@ public sealed record DesktopSettings
 
     public bool ConfigureSystemProxy { get; init; } = true;
 
+    /// <summary>Variables HTTP_PROXY y HTTPS_PROXY del usuario, para Claude Code, Codex, git y otras herramientas.</summary>
+    public bool ConfigureEnvironmentProxy { get; init; }
+
     /// <summary>Corrige valores fuera de rango de un archivo editado a mano.</summary>
     public DesktopSettings Normalized() => this with
     {

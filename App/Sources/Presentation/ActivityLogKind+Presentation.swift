@@ -16,6 +16,14 @@ extension ActivityLogKind {
             return "log.cellularLost"
         case .cellularRestored:
             return "log.cellularRestored"
+        case .backgroundModeOn:
+            return "log.backgroundModeOn"
+        case .backgroundModeFailed:
+            return "log.backgroundModeFailed"
+        case .backgroundModeResumed:
+            return "log.backgroundModeResumed"
+        case .pausedInBackground:
+            return "log.pausedInBackground"
         case .proxy(let event):
             return event.messageKey
         }
@@ -35,6 +43,10 @@ extension ActivityLogKind {
             return "antenna.radiowaves.left.and.right.slash"
         case .cellularRestored:
             return "antenna.radiowaves.left.and.right"
+        case .backgroundModeOn, .backgroundModeResumed:
+            return "lock.iphone"
+        case .backgroundModeFailed, .pausedInBackground:
+            return "pause.circle"
         case .proxy(.clientRejected):
             return "hand.raised"
         case .proxy(.authenticationFailed):
@@ -46,13 +58,13 @@ extension ActivityLogKind {
 
     var tint: Color {
         switch self {
-        case .serverStarted, .cellularRestored:
+        case .serverStarted, .cellularRestored, .backgroundModeOn:
             return Theme.success
-        case .serverStopped, .automaticRestart:
+        case .serverStopped, .automaticRestart, .backgroundModeResumed:
             return .secondary
         case .serverFailed:
             return Theme.danger
-        case .cellularLost, .proxy:
+        case .cellularLost, .backgroundModeFailed, .pausedInBackground, .proxy:
             return Theme.warning
         }
     }

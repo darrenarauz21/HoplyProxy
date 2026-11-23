@@ -38,6 +38,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
     private string _wifiHost;
     private string _portText;
     private bool _configureSystemProxy;
+    private bool _configureEnvironmentProxy;
     private StatusKind _statusKind;
     private string _statusTitle = string.Empty;
     private string? _statusDetail;
@@ -45,6 +46,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
     private string? _validationMessage;
     private bool _isTerminalCopied;
     private bool _systemProxyApplied;
+    private bool _environmentProxyApplied;
     private bool _started;
 
     public MainViewModel(PhoneConnection connection, IUsbmuxClient usbmux, ISettingsStore settingsStore, IDesktopShell shell)
@@ -59,6 +61,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
         _wifiHost = settings.WiFiHost;
         _portText = settings.Port.ToString(CultureInfo.InvariantCulture);
         _configureSystemProxy = settings.ConfigureSystemProxy;
+        _configureEnvironmentProxy = settings.ConfigureEnvironmentProxy;
 
         _selectUsbCommand = new RelayCommand(() => Mode = ConnectionMode.Usb, () => CanEdit);
         _selectWiFiCommand = new RelayCommand(() => Mode = ConnectionMode.WiFi, () => CanEdit);
@@ -69,6 +72,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
 
         _connection.StateChanged += (_, _) => Dispatcher.UIThread.Post(OnConnectionStateChanged);
         _connection.ForwardingFailed += (_, exception) => Dispatcher.UIThread.Post(() => OnForwardingFailed(exception));
+        _connection.HealthChanged += (_, health) => Dispatcher.UIThread.Post(() => _ = OnHealthChangedAsync(health));
         ShowIdleStatus();
     }
 
@@ -127,6 +131,25 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
     public bool IsSystemProxySupported => _connection.IsSystemProxySupported;
 
     public string SystemProxyHint => Localizer.Get(IsSystemProxySupported ? "systemProxy.hint" : "systemProxy.unsupported");
+
+    public bool ConfigureEnvironmentProxy
+    {
+        get => _configureEnvironmentProxy;
+        set
+        {
+            if (SetProperty(ref _configureEnvironmentProxy, value))
+            {
+                SaveSettings();
+            }
+        }
+    }
+
+    public bool IsEnvironmentProxySupported => _connection.IsEnvironmentProxySupported;
+
+    public string EnvironmentProxyHint =>
+        Localizer.Get(IsEnvironmentProxySupported ? "environmentProxy.hint" : "environmentProxy.unsupported");
+
+    public bool CanEditEnvironmentProxy => CanEdit && IsEnvironmentProxySupported;
 
     public bool IsConnected => _connection.State == ConnectionState.Connected;
 
@@ -267,6 +290,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
         {
             var report = await _connection.ConnectAsync(options, _lifetime.Token);
             _systemProxyApplied = report.SystemProxyApplied;
+            _environmentProxyApplied = report.EnvironmentProxyApplied;
             ShowConnectedStatus(report.PublicAddress);
         }
         catch (ConnectionException exception)
@@ -364,7 +388,12 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
 
     private ConnectionOptions? BuildValidatedOptions()
     {
-        var options = ConnectionOptions.Create(_mode, WiFiHost, ParsePort() ?? (ushort)0, ConfigureSystemProxy && IsSystemProxySupported);
+        var options = ConnectionOptions.Create(
+            _mode,
+            WiFiHost,
+            ParsePort() ?? (ushort)0,
+            ConfigureSystemProxy && IsSystemProxySupported,
+            ConfigureEnvironmentProxy && IsEnvironmentProxySupported);
         var issues = ConnectionOptionsValidator.Validate(options);
         if (issues.Count == 0)
         {
@@ -391,12 +420,15 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
             WiFiHost = WiFiHost.Trim(),
             Port = port >= ConnectionOptions.MinimumPort ? port.Value : ConnectionOptions.DefaultPort,
             ConfigureSystemProxy = ConfigureSystemProxy,
+            ConfigureEnvironmentProxy = ConfigureEnvironmentProxy,
         });
     }
 
     private void OnConnectionStateChanged()
     {
-        OnPropertiesChanged(nameof(IsConnected), nameof(IsBusy), nameof(CanEdit), nameof(CanEditSystemProxy), nameof(PrimaryActionText));
+        OnPropertiesChanged(
+            nameof(IsConnected), nameof(IsBusy), nameof(CanEdit), nameof(CanEditSystemProxy), nameof(CanEditEnvironmentProxy),
+            nameof(PrimaryActionText));
         _selectUsbCommand.NotifyCanExecuteChanged();
         _selectWiFiCommand.NotifyCanExecuteChanged();
         _toggleConnectionCommand.NotifyCanExecuteChanged();
@@ -419,6 +451,36 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
         SetStatus(StatusKind.Warning, Localizer.Get("status.phoneUnreachable"), Localizer.Get(detailKey));
     }
 
+    /// <summary>
+    /// El monitor perdió o recuperó el iPhone. Mientras no responde se sigue intentando solo; al volver se reactiva el
+    /// proxy del sistema y se muestra de nuevo la IP pública.
+    /// </summary>
+    private async Task OnHealthChangedAsync(ConnectionHealth health)
+    {
+        if (!IsConnected)
+        {
+            return;
+        }
+        if (health == ConnectionHealth.Unreachable)
+        {
+            SetStatus(StatusKind.Busy, Localizer.Get("status.reconnecting"), Localizer.Get("status.reconnecting.detail"));
+            return;
+        }
+
+        SetStatus(StatusKind.Busy, Localizer.Get("status.verifying"), null);
+        try
+        {
+            var publicAddress = await _connection.RefreshAfterRecoveryAsync(_lifetime.Token);
+            if (IsConnected && _connection.Health == ConnectionHealth.Healthy)
+            {
+                ShowConnectedStatus(publicAddress);
+            }
+        }
+        catch (OperationCanceledException)
+        {
+        }
+    }
+
     private void ShowIdleStatus() =>
         SetStatus(StatusKind.Idle, Localizer.Get("status.disconnected"), Localizer.Get("status.disconnected.detail"));
 
@@ -433,6 +495,10 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
         if (_systemProxyApplied)
         {
             detail += Environment.NewLine + Localizer.Get("status.systemProxyOn");
+        }
+        if (_environmentProxyApplied)
+        {
+            detail += Environment.NewLine + Localizer.Get("status.environmentProxyOn");
         }
         SetStatus(StatusKind.Ok, Localizer.Get("status.connected"), detail);
     }
@@ -453,6 +519,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
         ConnectionFailure.DeviceNotFound => Localizer.Get("failure.deviceNotFound"),
         ConnectionFailure.PortInUse => Localizer.Format("failure.portInUse", port),
         ConnectionFailure.SystemProxyFailed => Localizer.Get("failure.systemProxy"),
+        ConnectionFailure.EnvironmentProxyFailed => Localizer.Get("failure.environmentProxy"),
         _ => Localizer.Get("failure.invalidOptions"),
     };
 

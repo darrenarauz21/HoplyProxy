@@ -35,6 +35,11 @@ final class ProxyController: ObservableObject {
     /// El usuario pidió que el proxy esté activo; permite recuperarlo tras un cambio de red.
     private var wantsRunning = false
     private var restartTask: Task<Void, Never>?
+    /// La app pasó a segundo plano sin el modo en segundo plano: iOS pudo suspenderla y cerrar el listener.
+    private var mayHaveBeenSuspended = false
+    /// Reinicios automáticos seguidos tras un fallo del listener; se reinicia al quedar en marcha.
+    private var failedRestartAttempts = 0
+    private static let maximumFailedRestartAttempts = 5
 
     init(
         settingsStore: ProxySettingsStore,
@@ -63,6 +68,9 @@ final class ProxyController: ObservableObject {
 
         networkMonitor.onChange = { [weak self] availability in
             self?.handleNetworkChange(availability)
+        }
+        backgroundKeepAlive.onEvent = { [weak self] event in
+            self?.handleBackgroundKeepAliveEvent(event)
         }
         networkMonitor.start()
         signature.applyReminder(enabled: settings.remindsBeforeSignatureExpiry)
@@ -106,6 +114,7 @@ final class ProxyController: ObservableObject {
     func start() {
         guard !state.isActive else { return }
         wantsRunning = true
+        failedRestartAttempts = 0
         startServer()
     }
 
@@ -146,6 +155,47 @@ final class ProxyController: ObservableObject {
         if wasActive {
             stop()
             start()
+        }
+    }
+
+    // MARK: - Ciclo de vida de la app
+
+    /// La app vuelve al primer plano. Si el proxy debía estar activo y no lo está, o si iOS pudo suspender
+    /// la app mientras estaba en segundo plano, lo reinicia sin que el usuario tenga que pulsar nada.
+    func appDidBecomeActive() {
+        refreshNetwork()
+        backgroundKeepAlive.ensureRunning()
+
+        let wasSuspendable = mayHaveBeenSuspended
+        mayHaveBeenSuspended = false
+        guard wantsRunning else { return }
+
+        let needsRestart: Bool
+        switch state {
+        case .failed(let failure):
+            needsRestart = failure != .invalidConfiguration
+        case .stopped:
+            needsRestart = true
+        case .starting:
+            needsRestart = false
+        case .running:
+            needsRestart = wasSuspendable
+        }
+        guard needsRestart else { return }
+        cancelPendingRestart()
+        activity.log(.automaticRestart)
+        stopServer()
+        startServer()
+    }
+
+    /// La app pasa a segundo plano (pantalla bloqueada u otra app).
+    func appDidEnterBackground() {
+        guard state.isActive else { return }
+        if settings.keepsRunningInBackground {
+            backgroundKeepAlive.ensureRunning()
+        } else {
+            mayHaveBeenSuspended = true
+            activity.log(.pausedInBackground)
         }
     }
 
@@ -207,6 +257,18 @@ final class ProxyController: ObservableObject {
     private func handleServerState(_ newState: ProxyServerState, generation: Int) {
         guard generation == serverGeneration else { return }
         apply(newState)
+
+        switch newState {
+        case .running:
+            failedRestartAttempts = 0
+        case .failed(.listenerFailed) where wantsRunning && failedRestartAttempts < Self.maximumFailedRestartAttempts:
+            // El listener cayó sin un cambio de red que lo explique (por ejemplo, iOS reclamó el socket):
+            // se reintenta unas pocas veces antes de dejar el error a la vista.
+            failedRestartAttempts += 1
+            scheduleRestart()
+        default:
+            break
+        }
     }
 
     private func apply(_ newState: ProxyServerState) {
@@ -254,6 +316,17 @@ final class ProxyController: ObservableObject {
         } else if settings.transport == .wifi, state.isActive, wifiNetwork != previousWiFiNetwork {
             // Otra red Wi-Fi u otra dirección: el listener y la lista de la laptop pueden haber cambiado.
             scheduleRestart()
+        }
+    }
+
+    private func handleBackgroundKeepAliveEvent(_ event: BackgroundKeepAliveEvent) {
+        switch event {
+        case .started:
+            activity.log(.backgroundModeOn)
+        case .failed:
+            activity.log(.backgroundModeFailed)
+        case .resumed:
+            activity.log(.backgroundModeResumed)
         }
     }
 
