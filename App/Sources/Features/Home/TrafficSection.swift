@@ -19,9 +19,9 @@ struct TrafficSection: View {
                 detail: rateText(activity.uploadRate)
             )
             StatTile(
-                titleKey: "home.traffic.connections",
-                systemImage: "link",
-                value: Text(activity.statistics.acceptedConnections, format: .number),
+                titleKey: "home.traffic.devices",
+                systemImage: "laptopcomputer",
+                value: Text(activity.statistics.connectedDevices, format: .number),
                 detail: failuresText
             )
         }

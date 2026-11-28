@@ -3278,35 +3278,6 @@
         }
       }
     },
-    "home.status.connections %lld": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld conexiones activas"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld active connections"
-          }
-        },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld conexões ativas"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld connexions actives"
-          }
-        }
-      }
-    },
     "home.status.failed": {
       "extractionState": "manual",
       "localizations": {
@@ -3452,31 +3423,31 @@
         }
       }
     },
-    "home.traffic.connections": {
+    "home.traffic.devices": {
       "extractionState": "manual",
       "localizations": {
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Conexiones atendidas"
+            "value": "Equipos conectados"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Connections served"
+            "value": "Connected devices"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Conexões atendidas"
+            "value": "Dispositivos conectados"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Connexions servies"
+            "value": "Appareils connectés"
           }
         }
       }
