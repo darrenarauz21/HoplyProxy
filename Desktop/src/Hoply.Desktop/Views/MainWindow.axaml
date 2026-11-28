@@ -75,6 +75,20 @@
             </StackPanel>
           </Border>
 
+          <!-- Dirección real del proxy, para configurar a mano otras apps o comprobar el puerto. -->
+          <Border Classes="card compact" IsVisible="{Binding HasProxyAddress}">
+            <Grid ColumnDefinitions="Auto,*,Auto">
+              <Path Classes="icon small" Data="{StaticResource Icon.Link}" />
+              <SelectableTextBlock Grid.Column="1" Margin="10,0" VerticalAlignment="Center" FontSize="12.5"
+                                   FontFamily="{DynamicResource Tp.Mono}" Text="{Binding ProxyAddressText}" />
+              <Button Grid.Column="2" Classes="iconButton" Command="{Binding CopyProxyAddressCommand}"
+                      ToolTip.Tip="{Binding ProxyAddressCopyText}"
+                      AutomationProperties.Name="{Binding ProxyAddressCopyText}">
+                <Path Classes="icon small" Data="{StaticResource Icon.Copy}" />
+              </Button>
+            </Grid>
+          </Border>
+
           <!-- Modo de conexión -->
           <StackPanel Spacing="7">
             <TextBlock Classes="section" Text="{l:T mode.header}" />

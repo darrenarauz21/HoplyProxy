@@ -33,6 +33,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
     private readonly RelayCommand _selectWiFiCommand;
     private readonly AsyncRelayCommand _toggleConnectionCommand;
     private readonly AsyncRelayCommand _verifyCommand;
+    private readonly AsyncRelayCommand _copyProxyAddressCommand;
 
     private ConnectionMode _mode;
     private string _wifiHost;
@@ -45,6 +46,8 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
     private DeviceAvailability _device = DeviceAvailability.Unknown;
     private string? _validationMessage;
     private bool _isTerminalCopied;
+    private bool _isProxyAddressCopied;
+    private ushort _savedPort;
     private bool _systemProxyApplied;
     private bool _environmentProxyApplied;
     private bool _started;
@@ -59,6 +62,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
         var settings = settingsStore.Load();
         _mode = settings.Mode;
         _wifiHost = settings.WiFiHost;
+        _savedPort = settings.Port;
         _portText = settings.Port.ToString(CultureInfo.InvariantCulture);
         _configureSystemProxy = settings.ConfigureSystemProxy;
         _configureEnvironmentProxy = settings.ConfigureEnvironmentProxy;
@@ -68,6 +72,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
         _toggleConnectionCommand = new AsyncRelayCommand(ToggleConnectionAsync, () => !IsBusy);
         _verifyCommand = new AsyncRelayCommand(VerifyAsync, () => IsConnected);
         CopyTerminalCommand = new AsyncRelayCommand(CopyTerminalAsync);
+        _copyProxyAddressCommand = new AsyncRelayCommand(CopyProxyAddressAsync, () => HasProxyAddress);
         OpenDocumentationCommand = new AsyncRelayCommand(() => _shell.OpenUrlAsync(AppLinks.Documentation));
 
         _connection.StateChanged += (_, _) => Dispatcher.UIThread.Post(OnConnectionStateChanged);
@@ -86,6 +91,8 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
 
     public ICommand CopyTerminalCommand { get; }
 
+    public ICommand CopyProxyAddressCommand => _copyProxyAddressCommand;
+
     public ICommand OpenDocumentationCommand { get; }
 
     public bool IsUsb => _mode == ConnectionMode.Usb;
@@ -100,6 +107,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
             if (SetProperty(ref _wifiHost, value))
             {
                 ValidationMessage = null;
+                NotifyProxyAddressChanged();
             }
         }
     }
@@ -112,6 +120,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
             if (SetProperty(ref _portText, value))
             {
                 ValidationMessage = null;
+                NotifyProxyAddressChanged();
             }
         }
     }
@@ -227,6 +236,17 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
 
     public string TerminalButtonText => Localizer.Get(_isTerminalCopied ? "terminal.copied" : "terminal.copy");
 
+    /// <summary>host:puerto al que apuntan el proxy del sistema y la terminal; null si falta la IP del iPhone.</summary>
+    public string? ProxyAddress => CurrentOptions() is { } options && ConnectionOptionsValidator.Validate(options).Count == 0
+        ? options.ProxyAddress
+        : null;
+
+    public bool HasProxyAddress => ProxyAddress is not null;
+
+    public string ProxyAddressText => ProxyAddress is { } address ? Localizer.Format("proxy.address", address) : string.Empty;
+
+    public string ProxyAddressCopyText => Localizer.Get(_isProxyAddressCopied ? "terminal.copied" : "proxy.copy");
+
     private ConnectionMode Mode
     {
         get => _mode;
@@ -238,6 +258,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
             }
             OnPropertiesChanged(nameof(IsUsb), nameof(IsWiFi));
             ValidationMessage = null;
+            NotifyProxyAddressChanged();
             SaveSettings();
         }
     }
@@ -330,12 +351,24 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
 
     private async Task CopyTerminalAsync()
     {
-        var options = _connection.ActiveOptions
-            ?? ConnectionOptions.Create(_mode, WiFiHost, ParsePort() ?? ConnectionOptions.DefaultPort, configureSystemProxy: false);
-        await _shell.CopyToClipboardAsync(TerminalProxyCommand.ForCurrentPlatform(options));
+        await _shell.CopyToClipboardAsync(TerminalProxyCommand.ForCurrentPlatform(CurrentOptions()));
+        await ShowCopiedAsync(copied => _isTerminalCopied = copied, nameof(TerminalButtonText));
+    }
 
-        _isTerminalCopied = true;
-        OnPropertyChanged(nameof(TerminalButtonText));
+    private async Task CopyProxyAddressAsync()
+    {
+        if (ProxyAddress is not { } address)
+        {
+            return;
+        }
+        await _shell.CopyToClipboardAsync(address);
+        await ShowCopiedAsync(copied => _isProxyAddressCopied = copied, nameof(ProxyAddressCopyText));
+    }
+
+    private async Task ShowCopiedAsync(Action<bool> setCopied, string propertyName)
+    {
+        setCopied(true);
+        OnPropertyChanged(propertyName);
         try
         {
             await Task.Delay(CopiedFeedbackDuration, _lifetime.Token);
@@ -343,8 +376,21 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
         catch (OperationCanceledException)
         {
         }
-        _isTerminalCopied = false;
-        OnPropertyChanged(nameof(TerminalButtonText));
+        setCopied(false);
+        OnPropertyChanged(propertyName);
+    }
+
+    /// <summary>
+    /// La conexión activa o, si no hay, la que se haría con los datos de la ventana. Mientras el puerto escrito no es
+    /// válido se usa el último guardado, nunca el de la documentación.
+    /// </summary>
+    private ConnectionOptions CurrentOptions() => _connection.ActiveOptions
+        ?? ConnectionOptions.Create(_mode, WiFiHost, ValidPort() ?? _savedPort, configureSystemProxy: false);
+
+    private void NotifyProxyAddressChanged()
+    {
+        OnPropertiesChanged(nameof(ProxyAddress), nameof(HasProxyAddress), nameof(ProxyAddressText));
+        _copyProxyAddressCommand.NotifyCanExecuteChanged();
     }
 
     private async Task PollDevicesAsync(CancellationToken cancellationToken)
@@ -411,14 +457,17 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
     private ushort? ParsePort() =>
         ushort.TryParse(PortText.Trim(), NumberStyles.None, CultureInfo.InvariantCulture, out var port) ? port : null;
 
+    private ushort? ValidPort() => ParsePort() is { } port && port >= ConnectionOptions.MinimumPort ? port : null;
+
     private void SaveSettings()
     {
-        var port = ParsePort();
+        // Un puerto a medio escribir no reemplaza al guardado.
+        _savedPort = ValidPort() ?? _savedPort;
         _settingsStore.Save(new DesktopSettings
         {
             Mode = _mode,
             WiFiHost = WiFiHost.Trim(),
-            Port = port >= ConnectionOptions.MinimumPort ? port.Value : ConnectionOptions.DefaultPort,
+            Port = _savedPort,
             ConfigureSystemProxy = ConfigureSystemProxy,
             ConfigureEnvironmentProxy = ConfigureEnvironmentProxy,
         });
@@ -429,6 +478,7 @@ public sealed class MainViewModel : ViewModelBase, IDisposable
         OnPropertiesChanged(
             nameof(IsConnected), nameof(IsBusy), nameof(CanEdit), nameof(CanEditSystemProxy), nameof(CanEditEnvironmentProxy),
             nameof(PrimaryActionText));
+        NotifyProxyAddressChanged();
         _selectUsbCommand.NotifyCanExecuteChanged();
         _selectWiFiCommand.NotifyCanExecuteChanged();
         _toggleConnectionCommand.NotifyCanExecuteChanged();
