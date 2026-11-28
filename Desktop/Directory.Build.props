@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
-    <Version>0.4.0</Version>
+    <Version>0.5.0</Version>
     <Product>Hoply Proxy</Product>
   </PropertyGroup>
 </Project>

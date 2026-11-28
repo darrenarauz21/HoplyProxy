@@ -40,13 +40,9 @@ struct StatusSection: View {
         }
     }
 
-    @ViewBuilder
+    /// Los equipos conectados se ven en el indicador de tráfico; aquí, si el proxy sigue con la pantalla bloqueada.
     private var subtitle: some View {
-        if state.isActive {
-            Text("home.status.connections \(state.activeConnections)")
-        } else {
-            Text(keepsRunningInBackground ? "home.backgroundEnabled" : "home.keepOpen")
-        }
+        Text(keepsRunningInBackground ? "home.backgroundEnabled" : "home.keepOpen")
     }
 
     @ViewBuilder
