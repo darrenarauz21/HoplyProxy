@@ -4,7 +4,9 @@ namespace Hoply.Desktop.Core.Connection;
 /// <param name="Mode">USB o Wi-Fi.</param>
 /// <param name="Host">127.0.0.1 en USB; la IP del iPhone en Wi-Fi.</param>
 /// <param name="Port">Puerto configurado en la app del iPhone.</param>
-/// <param name="ConfigureSystemProxy">Activa el proxy automático (PAC) del sistema mientras dure la conexión.</param>
+/// <param name="ConfigureSystemProxy">
+/// Activa el proxy automático (PAC) del sistema mientras dure la conexión; en Windows, también el proxy manual.
+/// </param>
 /// <param name="ConfigureEnvironmentProxy">
 /// Define HTTP_PROXY y HTTPS_PROXY para el usuario mientras dure la conexión, para las herramientas que no leen el proxy
 /// del sistema (Node.js, Claude Code, Codex, git…).

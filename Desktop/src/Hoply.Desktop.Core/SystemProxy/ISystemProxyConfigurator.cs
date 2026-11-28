@@ -5,7 +5,10 @@ namespace Hoply.Desktop.Core.SystemProxy;
 /// <param name="Values">Valores anteriores por clave; null significa «no estaba definido».</param>
 public sealed record SystemProxySnapshot(string Platform, Dictionary<string, string?> Values);
 
-/// <summary>Activa y restaura el proxy automático (PAC) del sistema operativo.</summary>
+/// <summary>
+/// Activa y restaura el proxy automático (PAC) del sistema operativo. Cada plataforma puede añadir otros ajustes que
+/// apunten al mismo proxy (en Windows, el proxy manual) siempre que los guarde en la captura.
+/// </summary>
 public interface ISystemProxyConfigurator
 {
     string Platform { get; }
