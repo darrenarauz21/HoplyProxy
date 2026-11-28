@@ -37,6 +37,8 @@ A diferencia de los scripts de `Tools/Client`, la app no necesita Node.js ni go-
    - **USB:** conecta el cable. Si el iPhone pregunta, toca **Confiar**. La app muestra «iPhone conectado».
    - **Wi-Fi:** escribe la IP del iPhone, que aparece en la tarjeta **Conexión** de la app del iPhone.
 3. Pulsa **Conectar**. Cuando todo funciona, la app muestra tu IP pública a través del iPhone.
+
+Debajo del estado, la app muestra la dirección real del proxy, por ejemplo **Proxy: 127.0.0.1:1180**, con un botón para copiarla. Es la que debes poner si configuras una app a mano; el puerto es siempre el de **Avanzado**, no el de los ejemplos de esta guía.
 4. Para terminar, pulsa **Desconectar** o sal de la app desde el icono de la bandeja del sistema. En ambos casos se restaura el proxy anterior.
 
 ### Bandeja del sistema
@@ -47,13 +49,21 @@ La app abre como un panel flotante en la esquina inferior derecha, junto al relo
 
 Con la opción **Proxy del sistema** activa, la app configura el proxy automático (archivo PAC) del sistema para que navegadores y apps salgan por el iPhone. Antes de cambiarlo guarda la configuración que tenías; al desconectar la restaura. Si la app se cierra de golpe, la restaura la próxima vez que la abras.
 
+En Windows activa además el **proxy manual** («Usar un servidor proxy») con la misma dirección y sin pasar por el proxy las direcciones locales (`<local>;localhost;127.0.0.1`). Muchas apps .NET, las que usan WinHTTP y varias de consola solo leen el proxy manual e ignoran el PAC. Al desconectar, los cuatro valores (`AutoConfigURL`, `ProxyEnable`, `ProxyServer` y `ProxyOverride`) vuelven a estar como antes: los que no existían se borran.
+
+Si el iPhone deja de responder, la app no quita el proxy y sigue intentando reconectar (ver [Reconexión automática](#reconexión-automática)). Mientras tanto, las apps que usan el proxy manual se quedan sin conexión hasta que el iPhone vuelve o pulsas **Desconectar**.
+
 Desactívala si prefieres configurar cada app a mano.
 
 ### Variables para terminal y apps de desarrollo
 
-Claude Code, Codex, Claupet, `npm`, `git` y en general las herramientas hechas con Node.js no leen el proxy automático del sistema: solo usan las variables `HTTP_PROXY` y `HTTPS_PROXY`. Con esta opción activa (solo en Windows), al conectar la app define para tu usuario `HTTP_PROXY`, `HTTPS_PROXY`, `NO_PROXY` (direcciones locales) y `NODE_USE_ENV_PROXY=1`, y al desconectar deja los valores que tenías. Si la app se cierra de golpe, los restaura la próxima vez que la abras.
+Claude Code, Codex, `npm`, `git` y en general las herramientas hechas con Node.js no leen el proxy del sistema: solo usan las variables `HTTP_PROXY` y `HTTPS_PROXY`. Con esta opción activa (solo en Windows), al conectar la app define para tu usuario `HTTP_PROXY`, `HTTPS_PROXY`, `NO_PROXY` (direcciones locales) y `NODE_USE_ENV_PROXY=1`, y al desconectar deja los valores que tenías. Si la app se cierra de golpe, los restaura la próxima vez que la abras.
 
-Las variables solo llegan a los programas que se abren **después** de conectar: reinicia Claupet, la terminal o el editor tras pulsar **Conectar**. No requiere permisos de administrador.
+Las variables solo llegan a los programas que se abren **después** de conectar: reinicia la terminal o el editor tras pulsar **Conectar**. No requiere permisos de administrador.
+
+Lo mismo pasa al revés: un programa que abriste mientras la opción estaba activa conserva `HTTPS_PROXY` después de **Desconectar** y sigue intentando salir por un proxy que ya no existe. Reinícialo para que vuelva a la conexión normal.
+
+Por eso conviene dejar la opción **apagada** si tus apps ya leen el proxy de Windows: el proxy manual que activa **Proxy del sistema** les basta y no necesitan las variables.
 
 ### Reconexión automática
 
@@ -61,7 +71,7 @@ Mientras estás conectado, la app pide cada 5 segundos el archivo PAC al iPhone 
 
 ### Terminal
 
-**Copiar para la terminal** copia la línea que hace que `git`, `npm`, `curl` y otras herramientas usen el proxy en la terminal actual:
+**Copiar para la terminal** copia la línea que hace que `git`, `npm`, `curl` y otras herramientas usen el proxy en la terminal actual. Usa siempre la dirección que muestra la app: la de la conexión activa o, si no estás conectado, la del puerto de **Avanzado**. En los ejemplos aparece el puerto por defecto:
 
 ```sh
 # macOS y Linux
@@ -75,7 +85,7 @@ $env:HTTP_PROXY="http://127.0.0.1:1080"; $env:HTTPS_PROXY="http://127.0.0.1:1080
 
 ### Avanzado
 
-El puerto debe ser el mismo que en **Ajustes** de la app del iPhone (por defecto, 1080). En USB es también el puerto local de la laptop.
+El puerto debe ser el mismo que en **Ajustes** de la app del iPhone (por defecto, 1080). En USB es también el puerto local de la laptop. Si lo cambiaste, comprueba que coincidan en la línea **Proxy:** de la app.
 
 ## Solución de problemas
 
@@ -88,6 +98,8 @@ El puerto debe ser el mismo que en **Ajustes** de la app del iPhone (por defecto
 | El iPhone no responde | Se desconectó el cable o se detuvo el proxy en el iPhone. |
 | Reconectando… | El iPhone dejó de responder; la app reintenta sola. Desbloquea el iPhone y comprueba que Hoply siga abierto con el proxy iniciado y, para usarlo con la pantalla bloqueada, que **Seguir activo con la pantalla bloqueada** esté activo en Ajustes. |
 | Claude Code, Codex o `npm` no salen por el iPhone | Activa **Variables para terminal y apps de desarrollo**, conecta y reinicia esas apps. |
+| La app dice Conectado pero otra app no sale por el iPhone | Revisa el puerto con `reg query "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v AutoConfigURL`: debe coincidir con el de la línea **Proxy:** y con el de la app del iPhone. Si la otra app no lee el proxy de Windows, configúrala a mano con esa dirección o usa las variables para terminal. |
+| Una app sigue sin conexión después de desconectar | Se abrió con **Variables para terminal y apps de desarrollo** activa y conserva `HTTPS_PROXY`. Reiníciala. |
 | Revisa el proxy del sistema | No se pudo restaurar el proxy anterior. Ábrelo en la configuración de red del sistema y desactiva el proxy automático. |
 
 ## Arquitectura
@@ -98,7 +110,7 @@ Desktop/
   src/Hoply.Desktop.Core/     sin interfaz
     Connection/                     opciones, validación y orquestación (PhoneConnection)
     Usbmux/                         cliente de usbmuxd y reenvío de puerto por USB
-    SystemProxy/                    proxy automático en Windows, macOS y GNOME
+    SystemProxy/                    proxy automático en Windows, macOS y GNOME (y manual en Windows)
     Storage/                        ajustes y recuperación del proxy anterior
     Verification/                   comprobación de la IP pública a través del proxy
   src/Hoply.Desktop/          interfaz Avalonia (MVVM)

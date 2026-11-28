@@ -19,7 +19,7 @@ PALETTE = {
     "E": (22, 32, 46),     # ojos
 }
 
-# Señal de wifi cuyo punto es el iPhone con la cara de Claupet.
+# Señal de wifi cuyo punto es el iPhone con una cara.
 GRID = [
     ".....AAAAAA.....",
     "...AAAAAAAAAA...",
