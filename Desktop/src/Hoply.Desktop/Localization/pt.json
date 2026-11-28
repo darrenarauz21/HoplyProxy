@@ -30,6 +30,8 @@
   "advanced.port.hint": "A mesma dos Ajustes do app do iPhone. Padrão: 1080.",
   "terminal.copy": "Copiar para o terminal",
   "terminal.copied": "Copiado",
+  "proxy.address": "Proxy: {0}",
+  "proxy.copy": "Copiar endereço",
   "status.disconnected": "Desconectado",
   "status.disconnected.detail": "Inicie o proxy no iPhone e clique em Conectar.",
   "status.connecting": "Conectando…",

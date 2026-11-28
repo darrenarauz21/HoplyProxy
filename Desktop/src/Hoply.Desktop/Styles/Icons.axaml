@@ -13,4 +13,5 @@
   <StreamGeometry x:Key="Icon.Refresh">M20,12 A8,8 0 1 1 17.7,6.3 M20,3 L20,8 L15,8</StreamGeometry>
   <StreamGeometry x:Key="Icon.ChevronDown">M5.5,8.5 L12,15 L18.5,8.5</StreamGeometry>
   <StreamGeometry x:Key="Icon.ChevronUp">M5.5,15.5 L12,9 L18.5,15.5</StreamGeometry>
+  <StreamGeometry x:Key="Icon.Copy">M10,9 L19,9 A1,1 0 0 1 20,10 L20,19 A1,1 0 0 1 19,20 L10,20 A1,1 0 0 1 9,19 L9,10 A1,1 0 0 1 10,9 Z M5,15 L5,5 A1,1 0 0 1 6,4 L15,4</StreamGeometry>
 </ResourceDictionary>
