@@ -3,8 +3,9 @@
     Conecta la laptop con Windows a Hoply en el iPhone.
 
 .DESCRIPTION
-    En modo USB inicia el reenvío de go-ios. Configura el proxy automático (PAC) de Windows
-    mientras el script esté activo y restaura la configuración anterior al salir con Ctrl+C.
+    En modo USB inicia el reenvío de go-ios. Configura el proxy de Windows mientras el script
+    esté activo: el automático (PAC), que leen los navegadores, y el manual, que leen muchas
+    apps .NET, WinHTTP y de consola. Al salir con Ctrl+C restaura la configuración anterior.
 
 .PARAMETER Mode
     Usb (por defecto) o WiFi.
@@ -43,6 +44,8 @@ $ErrorActionPreference = 'Stop'
 $VerifyUrl = 'https://ifconfig.me'
 $ForwardStartupSeconds = 2
 $InternetSettingsPath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings'
+$LocalAddresses = '<local>;localhost;127.0.0.1'
+$ProxyValueNames = @('AutoConfigURL', 'ProxyEnable', 'ProxyServer', 'ProxyOverride')
 
 function Test-IPv4Address {
     param([string] $Value)
@@ -65,6 +68,32 @@ public static extern bool InternetSetOption(System.IntPtr hInternet, int dwOptio
     $refresh = 37
     [void] [Hoply.WinInet]::InternetSetOption([System.IntPtr]::Zero, $settingsChanged, [System.IntPtr]::Zero, 0)
     [void] [Hoply.WinInet]::InternetSetOption([System.IntPtr]::Zero, $refresh, [System.IntPtr]::Zero, 0)
+}
+
+function Get-ProxySettings {
+    # Valores actuales; $null significa «no estaba definido» y se borra al restaurar.
+    $current = Get-ItemProperty -Path $InternetSettingsPath -ErrorAction SilentlyContinue
+    $values = @{}
+    foreach ($name in $ProxyValueNames) {
+        $property = if ($current) { $current.PSObject.Properties[$name] } else { $null }
+        $values[$name] = if ($property) { $property.Value } else { $null }
+    }
+    return $values
+}
+
+function Set-ProxySettings {
+    param([hashtable] $Values)
+    foreach ($name in $ProxyValueNames) {
+        $value = $Values[$name]
+        if ($null -eq $value) {
+            Remove-ItemProperty -Path $InternetSettingsPath -Name $name -ErrorAction SilentlyContinue
+        } elseif ($name -eq 'ProxyEnable') {
+            Set-ItemProperty -Path $InternetSettingsPath -Name $name -Value ([int] $value) -Type DWord
+        } else {
+            Set-ItemProperty -Path $InternetSettingsPath -Name $name -Value ([string] $value) -Type String
+        }
+    }
+    Update-InternetSettings
 }
 
 function Start-UsbForward {
@@ -101,7 +130,7 @@ if ($Mode -eq 'WiFi') {
 
 $proxyAddress = "${ProxyHost}:$Port"
 $pacUrl = "http://$proxyAddress/proxy.pac"
-$previousPacUrl = (Get-ItemProperty -Path $InternetSettingsPath -Name AutoConfigURL -ErrorAction SilentlyContinue).AutoConfigURL
+$previousProxySettings = Get-ProxySettings
 $forwardProcess = $null
 $systemProxyChanged = $false
 
@@ -111,10 +140,15 @@ try {
     }
 
     if (-not $SkipSystemProxy) {
-        Set-ItemProperty -Path $InternetSettingsPath -Name AutoConfigURL -Value $pacUrl
         $systemProxyChanged = $true
-        Update-InternetSettings
+        Set-ProxySettings @{
+            AutoConfigURL = $pacUrl
+            ProxyEnable   = 1
+            ProxyServer   = $proxyAddress
+            ProxyOverride = $LocalAddresses
+        }
         Write-Host "Proxy automático de Windows configurado: $pacUrl"
+        Write-Host "Proxy manual de Windows configurado: $proxyAddress"
     }
 
     Test-ProxyConnection -ProxyAddress $proxyAddress
@@ -130,12 +164,7 @@ try {
     }
 } finally {
     if ($systemProxyChanged) {
-        if ($previousPacUrl) {
-            Set-ItemProperty -Path $InternetSettingsPath -Name AutoConfigURL -Value $previousPacUrl
-        } else {
-            Remove-ItemProperty -Path $InternetSettingsPath -Name AutoConfigURL -ErrorAction SilentlyContinue
-        }
-        Update-InternetSettings
+        Set-ProxySettings $previousProxySettings
         Write-Host 'Configuración de proxy restaurada.'
     }
     if ($forwardProcess -and -not $forwardProcess.HasExited) {
