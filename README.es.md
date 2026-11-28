@@ -33,7 +33,7 @@ app en el iPhone, otra en la laptop y un botón de **Conectar**. Sin jailbreak y
   activa el proxy del sistema y lo deja como estaba al desconectar.
 - 🌐 **Todo funciona.** HTTP y SOCKS5 en un solo puerto: navegadores, terminal, `git`, gestores de
   paquetes y la configuración de proxy de cada sistema.
-- 📈 **Su tráfico en vivo.** Velocidad de bajada y subida, datos consumidos y conexiones activas,
+- 📈 **Su tráfico en vivo.** Velocidad de bajada y subida, datos consumidos y equipos conectados,
   de un vistazo.
 - 🔄 **Se recupera solo.** Si cambia la red, Hoply lo nota y reinicia el proxy por usted.
 - 🌙 **Con la pantalla apagada.** El modo en segundo plano sigue trabajando con el iPhone bloqueado

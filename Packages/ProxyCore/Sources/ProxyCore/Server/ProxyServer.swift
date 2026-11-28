@@ -14,6 +14,8 @@ public final class ProxyServer: ProxyServerControlling, @unchecked Sendable {
     private let activity = ProxyActivityRecorder()
     private let statisticsInterval: TimeInterval
     private var sessions: [UUID: ConnectionSession] = [:]
+    private var sessionDevices: [UUID: String] = [:]
+    private var devices = ConnectedDevicesTracker()
     private var stateHandler: (@Sendable (ProxyServerState) -> Void)?
     private var statisticsHandler: (@Sendable (ProxyTrafficStatistics) -> Void)?
     private var statisticsTimer: DispatchSourceTimer?
@@ -112,6 +114,8 @@ public final class ProxyServer: ProxyServerControlling, @unchecked Sendable {
         transport.stop()
         let activeSessions = Array(sessions.values)
         sessions.removeAll()
+        sessionDevices.removeAll()
+        devices.reset()
         activeSessions.forEach { $0.close() }
     }
 
@@ -152,6 +156,9 @@ public final class ProxyServer: ProxyServerControlling, @unchecked Sendable {
             activity: activity
         )
         sessions[session.id] = session
+        let device = ConnectedDevicesTracker.device(of: connection.endpoint)
+        sessionDevices[session.id] = device
+        devices.connectionOpened(by: device, at: Date())
         session.start { [weak self] id in
             self?.sessionDidClose(id)
         }
@@ -165,6 +172,9 @@ public final class ProxyServer: ProxyServerControlling, @unchecked Sendable {
 
     private func sessionDidClose(_ id: UUID) {
         guard sessions.removeValue(forKey: id) != nil else { return }
+        if let device = sessionDevices.removeValue(forKey: id) {
+            devices.connectionClosed(by: device, at: Date())
+        }
         publishActiveConnections()
     }
 
@@ -193,6 +203,8 @@ public final class ProxyServer: ProxyServerControlling, @unchecked Sendable {
 
     /// Se publica en cada intervalo aunque no haya cambios, para que la velocidad mostrada vuelva a cero.
     private func publishStatistics() {
-        statisticsHandler?(activity.statistics)
+        var statistics = activity.statistics
+        statistics.connectedDevices = devices.count(at: Date())
+        statisticsHandler?(statistics)
     }
 }

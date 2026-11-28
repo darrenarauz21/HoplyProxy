@@ -57,7 +57,7 @@ Las variables solo llegan a los programas que se abren **después** de conectar:
 
 ### Reconexión automática
 
-Mientras estás conectado, la app pide cada 5 segundos el archivo PAC al iPhone (no gasta datos móviles) y lo vuelve a comprobar al instante si cambia la red de la laptop o falla el cable. Si el iPhone deja de responder, muestra **Reconectando…** y reintenta cada 2 segundos sin que hagas nada; cuando vuelve, reactiva el proxy del sistema para que los navegadores dejen la conexión directa y muestra de nuevo tu IP pública. En el contador de conexiones del iPhone verás estas comprobaciones.
+Mientras estás conectado, la app pide cada 5 segundos el archivo PAC al iPhone (no gasta datos móviles) y lo vuelve a comprobar al instante si cambia la red de la laptop o falla el cable. Si el iPhone deja de responder, muestra **Reconectando…** y reintenta cada 2 segundos sin que hagas nada; cuando vuelve, reactiva el proxy del sistema para que los navegadores dejen la conexión directa y muestra de nuevo tu IP pública. Estas comprobaciones no suman equipos: en **Equipos conectados**, la app del iPhone cuenta la laptop una sola vez.
 
 ### Terminal
 

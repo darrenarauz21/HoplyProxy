@@ -45,13 +45,6 @@ extension ProxyServerState {
         isActive ? "home.action.stop" : "home.action.start"
     }
 
-    var activeConnections: Int {
-        if case let .running(_, activeConnections) = self {
-            return activeConnections
-        }
-        return 0
-    }
-
     var failureMessageKey: LocalizedStringKey? {
         guard case let .failed(failure) = self else { return nil }
         return failure.messageKey

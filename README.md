@@ -33,7 +33,7 @@ iPhone, one on the laptop and a **Connect** button. No jailbreak, no Mac.
   it connects, turns on the system proxy and puts everything back when you disconnect.
 - 🌐 **Everything just works.** HTTP and SOCKS5 on a single port: browsers, terminals, `git`, package
   managers and every system's proxy settings.
-- 📈 **Live traffic.** Download and upload speed, data used and active connections at a glance.
+- 📈 **Live traffic.** Download and upload speed, data used and connected devices at a glance.
 - 🔄 **Heals itself.** When the network changes, Hoply notices and restarts the proxy for you.
 - 🌙 **Screen off, still working.** Background mode keeps going with the iPhone locked
   *(experimental)*.

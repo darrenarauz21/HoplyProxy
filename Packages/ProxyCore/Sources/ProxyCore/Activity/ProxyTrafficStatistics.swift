@@ -1,4 +1,4 @@
-/// Contadores acumulados desde que el servidor inició.
+/// Contadores acumulados desde que el servidor inició, más los equipos conectados en este momento.
 public struct ProxyTrafficStatistics: Equatable, Sendable {
     /// Bytes enviados por la laptop hacia internet.
     public var bytesUploaded: UInt64
@@ -10,13 +10,16 @@ public struct ProxyTrafficStatistics: Equatable, Sendable {
     public var rejectedConnections: Int
     /// Conexiones cuyo destino no se pudo alcanzar.
     public var failedConnections: Int
+    /// Equipos distintos conectados ahora (no conexiones): con la laptop sola, 1.
+    public var connectedDevices: Int
 
     public static let zero = ProxyTrafficStatistics(
         bytesUploaded: 0,
         bytesDownloaded: 0,
         acceptedConnections: 0,
         rejectedConnections: 0,
-        failedConnections: 0
+        failedConnections: 0,
+        connectedDevices: 0
     )
 
     public init(
@@ -24,13 +27,15 @@ public struct ProxyTrafficStatistics: Equatable, Sendable {
         bytesDownloaded: UInt64,
         acceptedConnections: Int,
         rejectedConnections: Int,
-        failedConnections: Int
+        failedConnections: Int,
+        connectedDevices: Int = 0
     ) {
         self.bytesUploaded = bytesUploaded
         self.bytesDownloaded = bytesDownloaded
         self.acceptedConnections = acceptedConnections
         self.rejectedConnections = rejectedConnections
         self.failedConnections = failedConnections
+        self.connectedDevices = connectedDevices
     }
 }
 
