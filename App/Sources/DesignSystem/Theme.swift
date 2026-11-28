@@ -19,7 +19,7 @@ enum Theme {
     static let cornerRadius: CGFloat = 16
     static let spacing: CGFloat = 16
 
-    /// Títulos con serifa, como en Claupet y en la app de escritorio.
+    /// Títulos con serifa, como en la app de escritorio.
     static func title(_ style: Font.TextStyle = .largeTitle) -> Font {
         .system(style, design: .serif).weight(.semibold)
     }
